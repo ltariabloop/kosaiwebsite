@@ -30,8 +30,12 @@ jobs:
       
       - name: Copy website files to root
         run: |
+          # Copy all files from kosai-official-website to root
           cp -r kosai-official-website/* .
-          cp -r kosai-official-website/.* . 2>/dev/null || true
+          # Copy hidden files if any
+          cp -r kosai-official-website/.gitignore . 2>/dev/null || true
+          # List what was copied for debugging
+          ls -la | head -20
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
