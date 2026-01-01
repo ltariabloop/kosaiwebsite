@@ -132,6 +132,100 @@
         object-fit: cover !important;
         display: block !important;
       }
+      /* Ensure consistent video container heights for desktop and mobile */
+      .hero-banner-a .wrapper-video .field--name-field-media-video-file .field--item,
+      .hero-banner-a .wrapper-video-mobile .field--name-field-media-video-file .field--item {
+        height: 640px !important;
+      }
+      @media only screen and (max-width: 767px) {
+        .hero-banner-a .wrapper-video .field--name-field-media-video-file .field--item,
+        .hero-banner-a .wrapper-video-mobile .field--name-field-media-video-file .field--item {
+          height: 640px !important; /* Same height as desktop */
+        }
+      }
+      .hero-banner-a .wrapper-video,
+      .hero-banner-a .wrapper-video-mobile {
+        position: relative;
+        width: 100%;
+        height: 640px !important;
+      }
+      @media only screen and (max-width: 767px) {
+        .hero-banner-a .wrapper-video,
+        .hero-banner-a .wrapper-video-mobile {
+          height: 640px !important; /* Same height as desktop */
+        }
+      }
+      .hero-banner-a .wrapper-video iframe,
+      .hero-banner-a .wrapper-video-mobile iframe {
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      /* Maintain vertical/portrait aspect ratio for all carousel items - override all height rules */
+      .wrapper-component-k .wrapper-grid .wrapper-image-item .field--type-image img {
+        aspect-ratio: 3 / 4 !important;
+        height: auto !important;
+        width: 100% !important;
+        object-fit: cover !important;
+      }
+      @media only screen and (min-width: 1502px) {
+        .wrapper-component-k .wrapper-grid .wrapper-image-item .field--type-image img {
+          aspect-ratio: 3 / 4 !important;
+          height: auto !important;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .wrapper-component-k .wrapper-grid .wrapper-image-item .field--type-image img {
+          aspect-ratio: 3 / 4 !important;
+          height: auto !important;
+        }
+      }
+      /* Fix Residential & Lifestyle black box to match other carousel items exactly - same as img styling */
+      .wrapper-component-k .wrapper-grid .wrapper-image-item .field--type-image .black-box-placeholder {
+        width: 100% !important;
+        aspect-ratio: 3 / 4 !important;
+        height: auto !important;
+        display: block !important;
+        background-color: #000000 !important;
+        box-sizing: border-box !important;
+        /* Match img filter and transitions exactly */
+        filter: brightness(0.7);
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        /* Remove any default spacing */
+        margin: 0 !important;
+        padding: 0 !important;
+        vertical-align: top;
+      }
+      @media only screen and (min-width: 1502px) {
+        .wrapper-component-k .wrapper-grid .wrapper-image-item .field--type-image .black-box-placeholder {
+          aspect-ratio: 3 / 4 !important;
+          height: auto !important;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .wrapper-component-k .wrapper-grid .wrapper-image-item .field--type-image .black-box-placeholder {
+          aspect-ratio: 3 / 4 !important;
+          height: auto !important;
+        }
+      }
+      /* Ensure the field container doesn't add extra spacing */
+      .wrapper-component-k .wrapper-grid .wrapper-image-item .field--type-image {
+        line-height: 0 !important;
+        font-size: 0 !important;
+      }
+      /* Make black box behave exactly like img - adapts to container */
+      .wrapper-component-k .wrapper-grid .wrapper-image-item .field--type-image .black-box-placeholder {
+        /* Remove any inline style overrides */
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+      }
       /* Footer color palette */
       .footer {
         background-color: #F7F5EC !important;
@@ -773,7 +867,7 @@
 
                         <a href="#" target="_blank">
                     
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <div style="width: 100%; height: 100%; min-height: 400px; background-color: #000000;"></div>
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <div class="black-box-placeholder"></div>
 
 
 </div>
