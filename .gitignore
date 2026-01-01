@@ -30,3 +30,12 @@ npm-debug.log*
 
 # Keep the website files
 !kosai-official-website/
+
+# Large video files (exceed GitHub's 100MB limit)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+# But allow small video files if needed
+!**/small-*.mp4
