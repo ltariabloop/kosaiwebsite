@@ -15,36 +15,18 @@ ENV/
 *.swp
 *.swo
 *~
+
+# OS
 .DS_Store
+Thumbs.db
 
-# Logs
-*.log
-npm-debug.log*
-
-# Node modules (for React project if needed)
+# Node (if any)
 node_modules/
-package-lock.json
-yarn.lock
-
-# Build outputs
-dist/
-build/
-*.egg-info/
+npm-debug.log*
 
 # Temporary files
 *.tmp
-*.bak
-*.backup
+*.log
 
-# OS files
-Thumbs.db
-.DS_Store
-
-# Server files
-*.pid
-*.sock
-
-# Environment variables
-.env
-.env.local
-
+# Keep the website files
+!kosai-official-website/
