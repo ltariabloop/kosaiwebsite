@@ -32,10 +32,9 @@ npm-debug.log*
 !kosai-official-website/
 
 # Large video files (exceed GitHub's 100MB limit)
-*.mp4
 *.mov
 *.avi
 *.mkv
 *.webm
-# But allow small video files if needed
-!**/small-*.mp4
+# Allow compressed MP4 files (under 100MB)
+!kosai-official-website/balivideo.mp4
