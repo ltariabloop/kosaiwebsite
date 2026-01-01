@@ -1,0 +1,36 @@
+(function ($) {
+  var $component = $('div.wrapper-component-h-a');
+
+  // Parallax for all images in this component
+  var images = $component.find('img');
+
+  for (var i=0; i<images.length; i++) {
+    new simpleParallax(images[i], {
+      delay: .6,
+      transition: 'cubic-bezier(0,0,0,1)'
+    })
+  }
+  $component.each(function() {
+    var bgColor = $(this).css("backgroundColor");
+    if( bgColor === 'rgba(0, 0, 0, 0)') {
+      bgColor = '#FBF8EE'
+    }
+    $(this).find('.wrapper-link a').append('<span style="background:'+bgColor+'"></span>')
+  })
+  // Shorten text
+  $component.find('div.wrapper-title').each(function() {
+    var $this = $(this);
+
+    $this.text(truncate($this.text().trim(), 8));
+  })
+
+  $component.find('div.wrapper-content').find('p').each(function() {
+    var $this = $(this);
+
+    $this.html(truncate($this.html().trim(), 50));
+  })
+
+  function truncate(str, no_words) {
+    return str.split(" ").splice(0, no_words).join(" ");
+  }
+} (jQuery))

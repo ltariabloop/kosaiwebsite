@@ -1,0 +1,17 @@
+jQuery(document).ready(function() {
+    jQuery(".wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article > .field--name-field-title").on("click", function() {
+      if (jQuery(this).hasClass("active")) {
+        jQuery(this).removeClass("active");
+        jQuery(this)
+            .siblings(".wrapper-component-e-d .wrapper-article-content")
+            .slideUp(300);
+        } else {
+        jQuery(".wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article > .field--name-field-title").removeClass("active");
+        jQuery(this).addClass("active");
+        jQuery(".wrapper-component-e-d .wrapper-article-content").slideUp(300);
+        jQuery(this)
+            .siblings(".wrapper-component-e-d .wrapper-article-content")
+            .slideDown(300);
+        }
+    });
+});

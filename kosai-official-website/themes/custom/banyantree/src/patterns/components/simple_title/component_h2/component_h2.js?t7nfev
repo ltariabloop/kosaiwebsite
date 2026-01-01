@@ -1,0 +1,70 @@
+(function ($) {
+  // Parallax for all images in this component
+  // const images = $('.wrapper-component-h-b img');
+  // for (let i = 0; i <= images.length; i++) {
+  //   new simpleParallax(images[i], {
+  //     delay: .6,
+  //     transition: 'cubic-bezier(0,0,0,1)',
+  //   });
+  // }
+
+  // Shorten text
+  $('.wrapper-component-h-b .wrapper-content .wrapper-title').each(function () {
+    const currentText = $(this).text();
+    const truncatedText = truncate(currentText.trim(), 8);
+    $(this).text(truncatedText);
+  });
+
+  function truncate(str, no_words) {
+    return str.split(" ").splice(0, no_words).join(" ");
+  }
+
+  $(function () {
+    var componentClass = '.wrapper-component-h-b';
+    var $playButton = $(`${componentClass} .wrapper-play-video`);
+
+    // Fix bug autoplay for iOS
+    let videoElements = $(`${componentClass} video[autoplay="autoplay"]`);
+    videoElements.attr('playsinline', '');
+
+    $playButton.on('click', function () {
+      $(this).parent().addClass('fading');
+      $(this).parent().parent().find('.desktop-image').addClass('fading');
+      $(this).parent().parent().find('.mobile-image').addClass('fading');
+      $(this).parent().parent().find('.field--name-field-video').addClass('show');
+      $(this).parent().parent().find('.field--name-field-video video').addClass('show');
+      $(this).parent().parent().find('.field--name-field-video video').trigger('play');
+    });
+
+    let elements = $('.wrapper-component-h-b.has-opacity');
+    if (elements.length > 0) {
+      for (const element of elements) {
+        let opacity = $(element).data('opacity') || 0;
+        opacity = opacity / 100;
+        let images = $(element).find('.field--name-field-image.field--type-image');
+        let mobileImages = $(element).find('.field--name-field-image-mobile.field--type-image');
+        if (images.length > 0) {
+          if (mobileImages.length > 0) {
+            Array.prototype.push.apply(images, mobileImages);
+          }
+
+          for (const image of images) {
+            $(image).append('<div class="custom-opacity" style="background: #000000 0% 0% no-repeat padding-box; --custom-opacity-height: 100%; --custom-opacity-height-mobile: 100%; z-index: 1; --custom-opacity-number: ' + opacity + ';"></div>');
+            $(element).find('.wrapper-content-slide').css('z-index', 99);
+          }
+        }
+
+        let videos = $(element).find('.field--name-field-video .field--name-field-media-video-file');
+        if (videos.length > 0) {
+          for (const video of videos) {
+            let videoEle = $(video).find('video[autoplay="autoplay"]');
+            if (videoEle.length > 0) {
+              $(video).append('<div class="custom-opacity" style="background: #000000 0% 0% no-repeat padding-box; --custom-opacity-height: 100%; --custom-opacity-height-mobile: 100%; z-index: 1; --custom-opacity-number: ' + opacity + ';"></div>');
+              $(element).find('.wrapper-content-slide').css('z-index', 99);
+            }
+          }
+        }
+      }
+    }
+  });
+}(jQuery));

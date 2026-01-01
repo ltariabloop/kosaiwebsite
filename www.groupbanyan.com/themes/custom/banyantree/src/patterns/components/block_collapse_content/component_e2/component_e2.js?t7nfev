@@ -1,0 +1,17 @@
+jQuery(document).ready(function() {
+    jQuery(".wrapper-component-e-b .field--name-field-title").on("click", function() {
+        if (jQuery(this).hasClass("active")) {
+        jQuery(this).removeClass("active");
+        jQuery(this)
+            .siblings(".wrapper-component-e-b .field--name-field-content")
+            .slideUp(300);
+        } else {
+        jQuery(".wrapper-component-e-b .field--name-field-title").removeClass("active");
+        jQuery(this).addClass("active");
+        jQuery(".wrapper-component-e-b .field--name-field-content").slideUp(300);
+        jQuery(this)
+            .siblings(".wrapper-component-e-b .field--name-field-content")
+            .slideDown(300);
+        }
+    });
+});

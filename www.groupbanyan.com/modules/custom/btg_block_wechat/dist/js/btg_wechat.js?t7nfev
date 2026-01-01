@@ -1,0 +1,12 @@
+(function ($) {
+  // Get the modal
+  $('#myImg').click(function (e) {
+    $('#myModal').css('display', 'block');
+    $('#img01').attr('src');
+  });
+  // Get the <span> element that closes the modal
+  // When the user clicks on <span> (x), close the modal
+  $(".close").click(function (e) {
+    $('#myModal').css('display','none');
+  });
+})(jQuery);

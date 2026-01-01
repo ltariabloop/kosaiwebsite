@@ -1,0 +1,28 @@
+(function ($) {
+    document.addEventListener('DOMContentLoaded', function() {
+      const progressBar = document.getElementById('progress-bar');
+      const progressContainer = document.getElementById('progress-container');
+    
+      window.addEventListener('scroll', function() {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+    
+        const scrollPercent = (scrollTop / (scrollHeight - clientHeight)) * 100;
+        progressBar.style.width = scrollPercent + '%';
+    
+        // Show/hide progress bar based on scroll position
+        if (scrollPercent > 0) {
+          progressContainer.style.display = 'block';
+        } else {
+          progressContainer.style.display = 'none';
+        }
+      });
+    });
+    var parentElement = document.querySelector(".simple-title-component");
+    var firstElement = parentElement.querySelector(".bottom-content-content");
+    var elementWithId1 = document.querySelector(".blog-featured-hotels .wrapper-right-content-blog");
+    if(elementWithId1 && firstElement){
+      parentElement.insertBefore(elementWithId1, firstElement);
+    }
+})(jQuery);

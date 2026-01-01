@@ -1,0 +1,165 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
+ */
+@import url("https://use.typekit.net/kxs7kia.css");
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+.component-brand-wall {
+  width: calc(100% + 280px);
+  position: relative;
+  margin-left: -140px;
+  margin-right: -140px;
+  padding: 112px 0;
+  background-color: #00140D;
+  padding: 30px 140px 0;
+}
+@media only screen and (max-width: 1023px) {
+  .component-brand-wall {
+    width: calc(100% + 120px);
+    margin-left: -60px;
+    margin-right: -60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .component-brand-wall {
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    margin-right: -30px;
+    padding: 0 0 50px;
+  }
+}
+@media (max-width: 1023px) {
+  .component-brand-wall {
+    padding: 30px 30px 0;
+  }
+}
+@media (max-width: 767px) {
+  .component-brand-wall {
+    padding: 30px 24px 0;
+  }
+}
+.component-brand-wall .logo {
+  margin-bottom: 16px;
+}
+@media (max-width: 767px) {
+  .component-brand-wall .logo {
+    margin-bottom: 8px;
+  }
+  .component-brand-wall .logo img {
+    width: 150px;
+  }
+}
+.component-brand-wall .list-brand > div > .field--item:last-child {
+  border-bottom: 1px solid #738B38;
+}
+.component-brand-wall .list-brand .paragraph > .field--name-field-title {
+  color: #BFF143;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .component-brand-wall .list-brand .paragraph > .field--name-field-title {
+    font-size: 12px;
+  }
+}
+.component-brand-wall .list-brand .paragraph > .field--name-field-title::after {
+  content: "";
+  width: -webkit-fill-available;
+  height: 1px;
+  background-color: #738B38;
+  position: absolute;
+  top: calc(50% - 1px);
+  margin-left: 16px;
+}
+.component-brand-wall .list-brand .paragraph > .field--name-field-image-and-link {
+  display: flex;
+  margin: 16px 0;
+  flex-wrap: wrap;
+  width: calc(100% + 10px);
+}
+@media (max-width: 1420px) {
+  .component-brand-wall .list-brand .paragraph > .field--name-field-image-and-link {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .component-brand-wall .list-brand .paragraph > .field--name-field-image-and-link {
+    margin: 8px 0;
+  }
+}
+.component-brand-wall .list-brand .paragraph > .field--name-field-image-and-link > .field--item > * {
+  height: 72px;
+}
+@media (max-width: 767px) {
+  .component-brand-wall .list-brand .paragraph > .field--name-field-image-and-link > .field--item > * {
+    height: 56px;
+  }
+}
+@media (max-width: 767px) {
+  .component-brand-wall .list-brand .paragraph > .field--name-field-image-and-link > .field--item {
+    width: 82px;
+    height: 56px;
+  }
+}
+.component-brand-wall .list-brand .paragraph > .field--name-field-image-and-link > .field--item img {
+  width: 104px;
+  height: 72px;
+}
+@media (max-width: 767px) {
+  .component-brand-wall .list-brand .paragraph > .field--name-field-image-and-link > .field--item img {
+    width: 82px;
+    height: 56px;
+  }
+}
+.component-brand-wall .list-brand .paragraph > .field--name-field-image-and-link > .field--item svg {
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 767px) {
+  .component-brand-wall .list-brand .paragraph > .field--name-field-image-and-link > .field--item svg {
+    width: 82px;
+    height: 56px;
+  }
+}
+.component-brand-wall .list-brand .paragraph > .field--name-field-image-and-link > .field--item svg:hover path {
+  fill: #BFF143;
+  transition: all 0.5s ease-in-out;
+}
+
+/*# sourceMappingURL=component_brand_wall.css.map */

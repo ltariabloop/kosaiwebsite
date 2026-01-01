@@ -1,0 +1,98 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
+ */
+@import url("https://use.typekit.net/kxs7kia.css");
+.wrapper-component-x,
+.component-table {
+  width: 100%;
+  max-width: 1640px;
+  margin: 0 auto 80px; }
+  .wrapper-component-x .table-responsive,
+  .component-table .table-responsive {
+    max-height: 440px;
+    border: 0;
+    overflow: auto; }
+    @media only screen and (max-width: 767px) {
+      .wrapper-component-x .table-responsive,
+      .component-table .table-responsive {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap; } }
+  .wrapper-component-x thead,
+  .component-table thead {
+    position: sticky;
+    top: 0; }
+    .wrapper-component-x thead th,
+    .component-table thead th {
+      padding: 30px 20px 30px 0 !important;
+      border: 0 !important;
+      background-color: #fff;
+      box-shadow: inset 0 -1px 0 #695647;
+      vertical-align: top !important; }
+  .wrapper-component-x tbody tr,
+  .component-table tbody tr {
+    background-color: transparent !important; }
+  .wrapper-component-x tbody td,
+  .component-table tbody td {
+    padding: 27px 20px 27px 0 !important;
+    color: #695647 !important;
+    border-top: 0 !important;
+    border-bottom: 1px solid #695647 !important; }
+    .wrapper-component-x tbody td:first-child,
+    .component-table tbody td:first-child {
+      font-family: contralto-big, Helvetica, Arial, sans-serif;
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 1.2;
+      padding: 20px 20px 10px 0 !important;
+      color: #6F6A37 !important; }
+      @media only screen and (max-width: 1024px) {
+        .wrapper-component-x tbody td:first-child,
+        .component-table tbody td:first-child {
+          font-size: 30px;
+          line-height: 1.2; } }
+      @media only screen and (max-width: 1024px) {
+        .wrapper-component-x tbody td:first-child,
+        .component-table tbody td:first-child {
+          font-size: 22px;
+          padding: 27px 20px 27px 0 !important; } }
+    .wrapper-component-x tbody td img,
+    .component-table tbody td img {
+      margin-left: 45px; }
+  .wrapper-component-x .table-col-6 td,
+  .component-table .table-col-6 td {
+    width: 15%; }
+    .wrapper-component-x .table-col-6 td:first-child,
+    .component-table .table-col-6 td:first-child {
+      width: 25%; }
+  .wrapper-component-x .table-col-5 td,
+  .component-table .table-col-5 td {
+    width: 18.75%; }
+    .wrapper-component-x .table-col-5 td:first-child,
+    .component-table .table-col-5 td:first-child {
+      width: 25%; }
+  .wrapper-component-x .table-col-4 td,
+  .component-table .table-col-4 td {
+    width: 23.333%; }
+    .wrapper-component-x .table-col-4 td:first-child,
+    .component-table .table-col-4 td:first-child {
+      width: 30%; }
+  .wrapper-component-x .table-col-3 td,
+  .component-table .table-col-3 td {
+    width: 30%; }
+    .wrapper-component-x .table-col-3 td:first-child,
+    .component-table .table-col-3 td:first-child {
+      width: 40%; }
+  .wrapper-component-x .table-col-2 td,
+  .component-table .table-col-2 td {
+    width: 50%; }
+
+/*# sourceMappingURL=component_table.css.map */

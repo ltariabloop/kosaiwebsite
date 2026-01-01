@@ -1,0 +1,40 @@
+(function ($) {
+
+  var componentClass = '.wrapper-component-blog';
+    // var totalSlick = $(`${componentClass} .slick-dots li`).length
+
+    // $(`<p class="slick-progress"><span class="big">1/</span><span class="small">${totalSlick}</span></p>`).insertAfter(`${componentClass} .slick-prev`)
+    let isFirstTime = true;
+    $(`${componentClass} .slick`).on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+      if (isFirstTime) {
+        $(`<p class="slick-progress"><span class="big">1/</span><span class="small">${totalSlick}</span></p>`).insertAfter(`${componentClass} .slick-prev`)
+      }
+      var currentSlick = (currentSlide ? currentSlide : 0 ) + 1;
+      var totalSlick = slick.slideCount;
+      
+      $(`${componentClass} .slick-progress`).html(`<span class="big">${currentSlick}/</span><span class="small">${totalSlick}</span></p>`)
+      isFirstTime = false;
+    });
+
+  $(function() {
+    /*This is for progress bar
+     *
+      window.onscroll = () => {
+        const bodyHeight = $('.wrapper-component-blog')[0].scrollHeight
+        const currentHeight = this.scrollY - bodyHeight
+        $("#component-blog_progress-bar").width(((currentHeight/bodyHeight)*100) - 5 + "%")
+      }
+    const componentClass = '.wrapper-component-blog'*/
+
+    // // Showing progrsss when slick is loaded
+    // const totalSlick = $(`${componentClass} .slick-dots li`).length
+    // $(`<p class="slick-progress"><span class="big">1/</span><span class="small">${totalSlick}</span></p>`).insertAfter(`${componentClass} .slick-prev`)
+
+    // // Updating progress 
+    // $(`${componentClass} .slick__slider`).on('afterChange', (event, slick, currentSlide) => {
+    //   const currentSlick = $(`${componentClass} .slick-dots .slick-active button`).html()
+    //   $(`${componentClass} .slick-progress`).html(`<span class="big">${currentSlick}/</span><span class="small">${totalSlick}</span></p>`)
+    // })
+    
+});
+})(jQuery);

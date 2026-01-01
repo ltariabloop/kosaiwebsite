@@ -1,0 +1,238 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
+ */
+@import url("https://use.typekit.net/kxs7kia.css");
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+.simple-title-component {
+  text-align: center;
+}
+.simple-title-component .wrapper-component-i {
+  margin-bottom: 80px;
+  width: calc(100% + 280px);
+  position: relative;
+  margin-left: -140px;
+  margin-right: -140px;
+  padding: 112px 0;
+}
+@media (max-width: 1024px) {
+  .simple-title-component .wrapper-component-i {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .simple-title-component .wrapper-component-i {
+    width: calc(100% + 120px);
+    margin-left: -60px;
+    margin-right: -60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .simple-title-component .wrapper-component-i {
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    margin-right: -30px;
+    padding: 0 0 50px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .simple-title-component .wrapper-component-i {
+    padding: 50px 140px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .simple-title-component .wrapper-component-i {
+    padding: 50px 30px;
+  }
+}
+.simple-title-component .wrapper-component-i.dark {
+  background: #00140D;
+}
+.simple-title-component .wrapper-component-i.dark .wrapper-info li {
+  color: #FBF8EE;
+}
+.simple-title-component .wrapper-component-i.dark .wrapper-info li::before {
+  background: #FBF8EE;
+}
+.simple-title-component .wrapper-component-i .wrapper-content {
+  padding: 0 0 40px;
+}
+.simple-title-component .wrapper-component-i .wrapper-content blockquote {
+  position: relative;
+  max-width: calc((100% - 280px - 264px) / 12 * 10 + 216px);
+  margin: 0px auto;
+  padding: 57px 60px 0;
+  border: 0;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .simple-title-component .wrapper-component-i .wrapper-content blockquote {
+    padding: 70px 40px 0;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .simple-title-component .wrapper-component-i .wrapper-content blockquote {
+    padding: 60px 40px 0;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .simple-title-component .wrapper-component-i .wrapper-content blockquote {
+    padding: 50px 40px 0;
+  }
+}
+.simple-title-component .wrapper-component-i .wrapper-content blockquote::before, .simple-title-component .wrapper-component-i .wrapper-content blockquote::after {
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 36px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 42px;
+}
+@media only screen and (max-width: 767px) {
+  .simple-title-component .wrapper-component-i .wrapper-content blockquote::before, .simple-title-component .wrapper-component-i .wrapper-content blockquote::after {
+    background-size: 37px;
+  }
+}
+.simple-title-component .wrapper-component-i .wrapper-content blockquote svg {
+  width: 42px;
+  height: 36px;
+  position: absolute;
+  left: 0;
+  top: -7px;
+}
+@media (max-width: 480px) {
+  .simple-title-component .wrapper-component-i .wrapper-content blockquote svg {
+    width: 37px;
+  }
+}
+.simple-title-component .wrapper-component-i .wrapper-content blockquote .field--type-text-with-summary {
+  font-family: "Avenir", Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.143;
+  color: #000;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  line-height: 1.143;
+  color: inherit;
+}
+@media only screen and (max-width: 1024px) {
+  .simple-title-component .wrapper-component-i .wrapper-content blockquote .field--type-text-with-summary {
+    font-size: 45px;
+    line-height: 1;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .simple-title-component .wrapper-component-i .wrapper-content blockquote .field--type-text-with-summary {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.simple-title-component .wrapper-component-i .wrapper-info {
+  max-width: calc((100% - 280px - 264px) / 12 * 10 + 216px);
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 32px;
+  font-family: "Avenir", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3636364;
+}
+@media only screen and (max-width: 1200px) {
+  .simple-title-component .wrapper-component-i .wrapper-info {
+    max-width: 100%;
+  }
+}
+.simple-title-component .wrapper-component-i .wrapper-info svg {
+  width: 42px;
+  height: 36px;
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+}
+@media (max-width: 480px) {
+  .simple-title-component .wrapper-component-i .wrapper-info svg {
+    width: 37px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .simple-title-component .wrapper-component-i .wrapper-info {
+    font-size: 16px;
+    line-height: 1;
+  }
+}
+.simple-title-component .wrapper-component-i .wrapper-info ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.simple-title-component .wrapper-component-i .wrapper-info li {
+  margin-bottom: 30px;
+  position: relative;
+  font-size: 18px;
+  font-weight: 400;
+}
+.simple-title-component .wrapper-component-i .wrapper-info li:before {
+  content: ".";
+  display: block;
+  font-size: 50px;
+  position: absolute;
+  top: -62px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 50px;
+}
+@media only screen and (max-width: 1023px) {
+  .simple-title-component .wrapper-component-i .wrapper-info li:before {
+    top: -55px;
+  }
+}
+.simple-title-component .wrapper-component-i .wrapper-info li:first-child:before {
+  display: none;
+}
+.simple-title-component .wrapper-component-i .wrapper-info li:last-child, .simple-title-component .wrapper-component-i .wrapper-info li:only-child {
+  margin-bottom: 0;
+}
+.simple-title-component .wrapper-component-i .wrapper-link a {
+  color: inherit;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=component_i.css.map */

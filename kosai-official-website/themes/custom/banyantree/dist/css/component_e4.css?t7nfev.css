@@ -1,0 +1,274 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
+ */
+@import url("https://use.typekit.net/kxs7kia.css");
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+.wrapper-component-e-d {
+  width: 100%;
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 0 100px;
+}
+.wrapper-component-e-d:has(.wrapper-title) {
+  padding-top: 80px;
+}
+.wrapper-component-e-d .wrapper-title {
+  font-family: "Avenir", Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.143;
+  color: #6F6A37;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  margin-bottom: 70px;
+}
+@media only screen and (max-width: 1024px) {
+  .wrapper-component-e-d .wrapper-title {
+    font-size: 45px;
+    line-height: 1;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrapper-component-e-d .wrapper-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article {
+  border-bottom: 1px solid #7f7f7f;
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article > .field--name-field-title {
+  font-family: contralto-big, Helvetica, Arial, sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 1;
+  margin-top: 5px;
+  padding: 25px 100px 20px 0;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article > .field--name-field-title {
+    padding: 37px 100px 30px 0;
+    font-size: 30px;
+  }
+  @supports (-webkit-touch-callout: none) {
+    .wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article > .field--name-field-title {
+      padding-bottom: 37px;
+    }
+  }
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article > .field--name-field-title:before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cg id='Group_2364' data-name='Group 2364' transform='translate(0.29 0)'%3E%3Cg id='Path_55' data-name='Path 55' transform='translate(-0.29 0)' fill='none'%3E%3Cpath d='M25,0A25,25,0,1,1,0,25,25,25,0,0,1,25,0Z' stroke='none'/%3E%3Cpath d='M 25 2 C 21.89414024353027 2 18.88224029541016 2.607841491699219 16.04798126220703 3.806629180908203 C 13.30939102172852 4.964958190917969 10.84946823120117 6.623619079589844 8.736541748046875 8.736541748046875 C 6.623619079589844 10.84946823120117 4.964958190917969 13.30939102172852 3.806629180908203 16.04798126220703 C 2.607841491699219 18.88224029541016 2 21.89414024353027 2 25 C 2 28.10585975646973 2.607841491699219 31.11775970458984 3.806629180908203 33.95201873779297 C 4.964958190917969 36.69060897827148 6.623619079589844 39.15052795410156 8.736541748046875 41.26345825195312 C 10.84946823120117 43.37638092041016 13.30939102172852 45.03504180908203 16.04798126220703 46.1933708190918 C 18.88224029541016 47.39215850830078 21.89414024353027 48 25 48 C 28.10585975646973 48 31.11775970458984 47.39215850830078 33.95201873779297 46.1933708190918 C 36.69060897827148 45.03504180908203 39.15052795410156 43.37638092041016 41.26345825195312 41.26345825195312 C 43.37638092041016 39.15052795410156 45.03504180908203 36.69060897827148 46.1933708190918 33.95201873779297 C 47.39215850830078 31.11775970458984 48 28.10585975646973 48 25 C 48 21.89414024353027 47.39215850830078 18.88224029541016 46.1933708190918 16.04798126220703 C 45.03504180908203 13.30939102172852 43.37638092041016 10.84946823120117 41.26345825195312 8.736541748046875 C 39.15052795410156 6.623619079589844 36.69060897827148 4.964958190917969 33.95201873779297 3.806629180908203 C 31.11775970458984 2.607841491699219 28.10585975646973 2 25 2 M 25 0 C 38.80712127685547 0 50 11.19287872314453 50 25 C 50 38.80712127685547 38.80712127685547 50 25 50 C 11.19287872314453 50 0 38.80712127685547 0 25 C 0 11.19287872314453 11.19287872314453 0 25 0 Z' stroke='none' fill='%23898d8d'/%3E%3C/g%3E%3Cline id='Line_40' data-name='Line 40' y1='13' x2='13' transform='translate(16.018 25.5) rotate(-45)' fill='none' stroke='%23898d8d' stroke-width='2.5'/%3E%3Cline id='Line_63' data-name='Line 63' x1='13' y1='13' transform='translate(16.018 25.5) rotate(-45)' fill='none' stroke='%23898d8d' stroke-width='2.5'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 1023px) {
+  .wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article > .field--name-field-title:before {
+    top: 26px;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  .wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article > .field--name-field-title:before {
+    top: 30px;
+  }
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article > .field--name-field-title.active:before {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 26.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 50 50' style='enable-background:new 0 0 50 50;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D .st1%7Bfill:none;stroke:%23000000;stroke-width:2.5;%7D%0A%3C/style%3E%3Cg id='Group_2364' transform='translate(0.29 0)'%3E%3Cg id='Path_55' transform='translate(-0.29 0)'%3E%3Cpath class='st0' d='M25,0c13.8,0,25,11.2,25,25S38.8,50,25,50S0,38.8,0,25S11.2,0,25,0z'/%3E%3Cpath d='M25,2c-3.1,0-6.1,0.6-9,1.8C13.3,5,10.8,6.6,8.7,8.7C6.6,10.8,5,13.3,3.8,16C2.6,18.9,2,21.9,2,25s0.6,6.1,1.8,9 c1.2,2.7,2.8,5.2,4.9,7.3c2.1,2.1,4.6,3.8,7.3,4.9c2.8,1.2,5.8,1.8,9,1.8s6.1-0.6,9-1.8c2.7-1.2,5.2-2.8,7.3-4.9 c2.1-2.1,3.8-4.6,4.9-7.3c1.2-2.8,1.8-5.8,1.8-9s-0.6-6.1-1.8-9c-1.2-2.7-2.8-5.2-4.9-7.3C39.2,6.6,36.7,5,34,3.8 C31.1,2.6,28.1,2,25,2 M25,0c13.8,0,25,11.2,25,25S38.8,50,25,50S0,38.8,0,25S11.2,0,25,0z'/%3E%3C/g%3E%3Cline id='Line_63' class='st1' x1='34.4' y1='25.5' x2='16' y2='25.5'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .wrapper-article-content {
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .wrapper-article-content {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse {
+  padding-bottom: 55px;
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse {
+    padding-bottom: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse > .field--item {
+  width: 31.2804878049%;
+  margin: 15px 3.0487804878% 35px 0;
+  float: left;
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse > .field--item {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse > .field--item {
+    margin-right: 0;
+    margin-left: 30px;
+  }
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse > .field--item:nth-child(3n+3) {
+  margin-right: 0;
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse > .field--item:nth-child(3n+3) {
+    margin-right: 15px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse > .field--item:last-child {
+    margin-right: 0;
+  }
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse .field--name-field-image {
+  margin-bottom: 40px;
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse .field--name-field-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-family: "Avenir", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3636364;
+  height: 60px;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 1024px) {
+  .wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse .field--name-field-title {
+    font-size: 16px;
+    line-height: 1;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse .field--name-field-title {
+    height: 45px;
+  }
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse .field--name-field-summary {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-height: 125px;
+  margin-bottom: 35px;
+  color: #695647;
+}
+@media (max-width: 1024px) {
+  .wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse .field--name-field-summary {
+    min-height: 115px;
+  }
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse .field--name-field-link a {
+  display: inline-block;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  font-weight: 500;
+}
+@media (max-width: 1024px) {
+  .wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse .field--name-field-link a {
+    font-size: 16px;
+  }
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse .field--name-field-link a:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #695647;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse .field--name-field-link a:after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 1px;
+  background-color: #F7F5EC;
+  position: absolute;
+  left: -10px;
+  bottom: 0;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse .field--name-field-link a:hover {
+  color: #6F6A37;
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item > .collapsed-article .field--name-field-content-collapse .field--name-field-link a:hover:after {
+  left: calc(100% + 10px);
+}
+.wrapper-component-e-d .field--name-field-content-collapse-node > .field--item:last-child > .collapsed-article {
+  border-bottom: 0;
+}
+
+/*# sourceMappingURL=component_e4.css.map */

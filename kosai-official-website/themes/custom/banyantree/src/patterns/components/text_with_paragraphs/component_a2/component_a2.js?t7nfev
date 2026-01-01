@@ -1,0 +1,73 @@
+(function ($) {
+  "use strict";
+  Drupal.behaviors.component_a2 = {
+    attach: function () {
+    },
+  };
+   // Shorten text
+  //  $('.row .ca2 .wrapper-title h2').each(function() {
+  //   var $this = $(this);
+  //   var currentText = $this.text().trim();
+
+  //   if (currentText.length > 60) {
+  //     $this.text(currentText.substring(0, 60) + '...');
+  //   }
+  // });
+
+  // $('.row .ca2 .wrapper-title h2').each(function() {
+  //   const currentText = $(this).text();
+  //   const truncatedText = truncate(currentText.trim(), 25);
+  //   $(this).text(truncatedText)
+  // })
+
+  // var $obj = $();
+
+  // $('.row .ca2 .wrapper-content p').each(function() {
+  //   var $this = $(this);
+  //   var $p = $this.find('p');
+
+  //   $obj = $obj.add($p.length? $p: $this);
+  // });
+  
+  // $obj.each(function() {
+  //   const currentText = $(this).text();
+  //   var truncatedText = truncate(currentText.trim(), 150);
+
+  //   if (truncatedText.length > 500) {
+  //     truncatedText = truncatedText.substring(0, 500) + '...';
+  //   }
+
+  //   $(this).text(truncatedText)
+  // })
+  $('.row .ca2 .wrapper-title h2').each(function () {
+    const currentText = $(this).text();
+    const truncatedText = truncate(currentText.trim(), 8);
+    $(this).text(truncatedText);
+  })
+  $('.row .ca2 .wrapper-content p').each(function () {
+    const currentText = $(this).text();
+    const truncatedText = truncate(currentText.trim(), 50);
+    $(this).text(truncatedText);
+  })
+
+  function truncate(str, no_words) {
+    return str.split(" ").splice(0, no_words).join(" ");
+  }
+
+  $(function () {
+    let elements = $('.ca2-wrapper .has-opacity');
+    if (elements.length > 0) {
+      for (const element of elements) {
+        let slides = $(element).find('.slick__slide .paragraph--type--image-and-text');
+        if (slides.length > 0) {
+          for (const slide of slides) {
+            let opacity = $(element).data('opacity') || 0;
+            opacity = opacity / 100;
+            $(slide).append('<div class="custom-opacity" style="--custom-opacity-height: 148px; --custom-opacity-height-mobile: 84px; z-index: 1; --custom-opacity-number: ' + opacity + ';"></div>');
+            $(slide).find('.field--name-field-title').css('z-index', 99);
+          }
+        }
+      }
+    }
+  });
+})(jQuery);

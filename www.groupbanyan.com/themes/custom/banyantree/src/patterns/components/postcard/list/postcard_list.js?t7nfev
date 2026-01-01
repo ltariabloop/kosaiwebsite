@@ -1,0 +1,144 @@
+(function($){
+    $(function () {
+        var $html = `
+        <div class="postcard-popup">
+            <div class="postcard-popup__wrapper">
+                <button class="postcard-popup__close" type="button">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="2.92578" height="39.498" rx="1.46289" transform="matrix(0.707099 -0.707115 0.707099 0.707115 0 2.07031)" fill="currentColor"/>
+                        <rect width="2.92578" height="39.498" rx="1.46289" transform="matrix(0.707099 0.707115 -0.707099 0.707115 27.9297 0)" fill="currentColor"/>
+                    </svg>
+                </button>
+                <div class="node--type-postcard node--view-mode-teaser">
+                    <div class="image-wrapper">
+                        <div class="field--name-field-prompt-picture">
+                            <img src="" />
+                        </div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="field--name-field-prompt-question">
+                        </div>
+                        <div class="field--name-field-prompt-message">
+                        </div>
+                    </div>
+                    <div class="footer-wrapper">
+                        <div class="footer-info-wrapper">
+                            <div class="field--name-field-fullname"></div>
+                            <div class="field--name-field-property"></div>
+                        </div>
+                        <div class="footer-download-wrapper">
+                            <a href="">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="postcard-popup__buttons">
+                    <button type="button" class="postcard-popup__prev">
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 17L1 9L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button type="button" class="postcard-popup__next">
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L9 9L1 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>`;
+        $('body').append($html);
+        var currentCard = 0;
+        function changePopupContent($index){
+            $('.postcard-popup .node--view-mode-teaser').addClass('fade-out');
+
+            var $card = $('.block-views-blockpostcard-block-list .view-postcard .view-content .views-row:nth-child('+($index + 1)+')')
+            var $image = $card.find('.field--name-field-prompt-picture img').attr('src');
+            var $question = $card.find('.field--name-field-prompt-question').text();
+            var $message = $card.find('.field--name-field-prompt-message').text();
+            var $fullname = $card.find('.field--name-field-fullname').text();
+            var $property = $card.find('.field--name-field-property').text();
+            var $link = $card.find('.footer-download-wrapper a').attr('href');
+
+            $('.postcard-popup').find('.field--name-field-prompt-picture img').attr('src', $image);
+            $('.postcard-popup').find('.field--name-field-prompt-question').text($question);
+            $('.postcard-popup').find('.field--name-field-prompt-message').text($message);
+            $('.postcard-popup').find('.field--name-field-fullname').text($fullname);
+            $('.postcard-popup').find('.field--name-field-property').text($property);
+            $('.postcard-popup').find('.footer-download-wrapper a').attr('href', $link);
+
+            $('.postcard-popup .node--view-mode-teaser').on('transitionend', function(){
+                $('.postcard-popup .node--view-mode-teaser').removeClass('fade-out')
+            })
+        }
+        $(document).on('click', '.postcard-popup__close', function(){
+            $('.postcard-popup').removeClass('show-popup');
+            $('body').removeClass('show-postcard-popup');
+        })
+        $(document).on('click', '.postcard-popup__next', function(){
+            var $cardIndex = currentCard+1 <= ($('.block-views-blockpostcard-block-list .view-postcard .view-content .views-row').length - 1) ? currentCard+1 : 0;
+            changePopupContent($cardIndex);
+            currentCard = $cardIndex;
+        })
+        $(document).on('click', '.postcard-popup__prev', function(){
+            var $cardIndex = currentCard - 1 >= 0 ? currentCard - 1 : ($('.block-views-blockpostcard-block-list .view-postcard .view-content .views-row').length - 1);
+            changePopupContent($cardIndex);
+            currentCard = $cardIndex;
+        })
+        $(document).on('click', '.block-views-blockpostcard-block-list .node--view-mode-teaser',  function(e){
+            if (e.target.tagName.toLowerCase() === 'a') {
+                return;
+            }
+            var $index = $(this).parent().index();
+            currentCard = $index;
+            var $image = $(this).find('.field--name-field-prompt-picture img').attr('src');
+            var $question = $(this).find('.field--name-field-prompt-question').text();
+            var $message = $(this).find('.field--name-field-prompt-message').text();
+            var $fullname = $(this).find('.field--name-field-fullname').text();
+            var $property = $(this).find('.field--name-field-property').text();
+            var $link = $(this).find('.footer-download-wrapper a').attr('href');
+
+            $('.postcard-popup').find('.field--name-field-prompt-picture img').attr('src', $image);
+            $('.postcard-popup').find('.field--name-field-prompt-question').text($question);
+            $('.postcard-popup').find('.field--name-field-prompt-message').text($message);
+            $('.postcard-popup').find('.field--name-field-fullname').text($fullname);
+            $('.postcard-popup').find('.field--name-field-property').text($property);
+            $('.postcard-popup').find('.footer-download-wrapper a').attr('href', $link);
+
+            $('.postcard-popup').addClass('show-popup');
+            $('body').addClass('show-postcard-popup');
+        });
+        
+        $(document).on("click", function (e) {
+            var sideContainer = $(".block-views-blockpostcard-block-list .node--view-mode-teaser, .postcard-popup__wrapper");
+            if (!sideContainer.is(e.target) && sideContainer.has(e.target).length === 0) {
+                $('.postcard-popup').removeClass('show-popup');
+                $('body').removeClass('show-postcard-popup');
+            }
+        });
+        // filter property
+        $('.block-views-blockpostcard-block-list .form-item-property select').val('All').prop('disabled', true);
+        var countryID ='All', propertyID = 'All';
+        var propertyOptions = $('.block-views-blockpostcard-block-list .form-item-property select option').clone();
+        $(document).on('change', '.block-views-blockpostcard-block-list .form-item-country select', function() {
+            countryID = $(this).val();
+            propertyID = 'All';
+        });
+        $(document).on('change', '.block-views-blockpostcard-block-list .form-item-property select', function() {
+            propertyID = $(this).val();
+        });
+        $(document).ajaxComplete(function(){
+            if($('.block-views-blockpostcard-block-list .form-item-country select').val() === 'All') {
+                $('.block-views-blockpostcard-block-list .form-item-property select').val('All').prop('disabled', true);
+            } else {
+                var $val = countryID;
+                $('.block-views-blockpostcard-block-list .form-item-property select').empty();
+                var newOption = propertyOptions.filter(function () {
+                    return $val  === 'All' || $(this).data('country-id') + '' === $val;
+                    }) 
+                $('.block-views-blockpostcard-block-list .form-item-property select').append(propertyOptions[0]);
+                $('.block-views-blockpostcard-block-list .form-item-property select').append(newOption).val(propertyID);
+                $('.block-views-blockpostcard-block-list .form-item-property select').prop('disabled', false);
+            }
+        })
+
+    })
+})(jQuery)

@@ -1,0 +1,66 @@
+(function ($) {
+  "use strict";
+  Drupal.behaviors.component_a1 = {
+    attach: function () {
+    },
+  };
+
+  $(function () {
+    let video_play = $('.hero-banner-a video')
+    if (video_play.length > 0) {
+        video_play.attr('playsinline', 'playsinline');
+    }
+    let originalElements = $('.hero-banner-a .field--name-field-image');
+    if (originalElements.length > 0) {
+      for (const element of originalElements) {
+        $(element).css('--custom-opacity-header', 0);
+        $(element).css('--custom-opacity-bottom', 0);
+      }
+    }
+
+    let video = $('.hero-banner-a .field--name-field-video-bg');
+    if (video.length > 0) {
+      $(video).css('--custom-opacity-header', 0);
+      $(video).css('--custom-opacity-bottom', 0);
+    }
+
+    let elements = $('.hero-banner-a .has-opacity');
+    if (elements.length > 0) {
+      for (const element of elements) {
+        let image = $(element).find('.opacity-part .field--name-field-image');
+        if (image.length > 0) {
+          $(image).css('--custom-opacity-header', 0);
+          $(image).css('--custom-opacity-bottom', 0);
+          let opacityHeader = $(element).data('opacity-header') || 0;
+          let opacityBottom = $(element).data('opacity-bottom') || 0;
+          opacityHeader = opacityHeader / 100;
+          opacityBottom = opacityBottom / 100;
+          $(image).css('--custom-opacity-header', opacityHeader);
+          $(image).css('--custom-opacity-bottom', opacityBottom);
+        }
+
+        let video = $(element).find('.opacity-part .field--name-field-video-bg');
+        if (video.length > 0) {
+          $(video).css('--custom-opacity-header', 0);
+          $(video).css('--custom-opacity-bottom', 0);
+          let opacityHeader = $(element).data('opacity-header') || 0;
+          let opacityBottom = $(element).data('opacity-bottom') || 0;
+          opacityHeader = opacityHeader / 100;
+          opacityBottom = opacityBottom / 100;
+          $(video).css('--custom-opacity-header', opacityHeader);
+          $(video).css('--custom-opacity-bottom', opacityBottom);
+        }
+
+        let opacityFullEles = $(element).find('.opacity-full');
+        if (opacityFullEles.length > 0) {
+          for (const opacityFullEle of opacityFullEles) {
+            let opacity = $(element).data('opacity-bottom') || 0;
+            opacity = opacity / 100;
+            $(opacityFullEle).parent().append('<div class="custom-opacity" style="background: #000000 0% 0% no-repeat padding-box; --custom-opacity-height: 100%; --custom-opacity-height-mobile: 100%; z-index: 1; --custom-opacity-number: ' + opacity + ';"></div>');
+            $(opacityFullEle).parent().find('.wrapper-caption').css('z-index', 99);
+          }
+        }
+      }
+    }
+  });
+})(jQuery);

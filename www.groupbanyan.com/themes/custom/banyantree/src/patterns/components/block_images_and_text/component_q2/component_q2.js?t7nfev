@@ -1,0 +1,30 @@
+(function ($) {
+  'use strict';
+
+  var $component = $('div.wrapper-component-q-b');
+  
+  // Shorten text
+  $component.find('div.wrapper-title').each(function() {
+    var $this = $(this);
+
+    $this.text(truncate($this.text().trim(), 12));
+  })
+
+  $component.find('div.wrapper-content').find('p').each(function() {
+    var $this = $(this);
+
+    $this.text(truncate($this.text().trim(), 80));
+  })
+
+  function truncate(str, no_words) {
+    return str.split(" ").splice(0, no_words).join(" ");
+  }
+
+  $(function() {
+    window.addEventListener('load', AOS.refresh)
+    AOS.init({
+      offset: 200,
+      duration: 2000,
+    })
+  });
+})(jQuery);

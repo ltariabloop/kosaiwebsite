@@ -1,0 +1,36 @@
+(function ($) {
+  // Shorten text
+  $('.wrapper-component-i .wrapper-content p').each(function() {
+    const currentText = $(this).text();
+    const truncatedText = truncate(currentText.trim(), 120);
+    $(this).text(truncatedText)
+  })
+
+  function truncate(str, no_words) {
+    return str.split(" ").splice(0, no_words).join(" ");
+  }
+
+  // limit title,content, Shorten text
+  // $('.wrapper-component-i .wrapper-content p').each(function() {
+  //   const currentText = $(this).text();
+  //   var truncatedText = truncate(currentText.trim(), 120);
+  //   if (truncatedText.length > 230) {
+  //     truncatedText = truncatedText.substring(0, 230) + '...';
+  //   }
+
+  //   $(this).text(truncatedText)
+  // })
+
+  // $('.wrapper-component-i .wrapper-content p').each(function() {
+  //   var $this = $(this);
+  //   var currentText = $this.text().trim();
+
+  //   if (currentText.length > 230) {
+  //     $this.text(currentText.substring(0, 230) + '...');
+  //   }
+  // });
+  function truncate(str, no_words) {
+    return str.split(" ").splice(0, no_words).join(" ");
+  }
+  
+})(jQuery);

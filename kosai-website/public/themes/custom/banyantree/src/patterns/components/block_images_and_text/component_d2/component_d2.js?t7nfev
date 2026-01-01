@@ -1,0 +1,69 @@
+(function ($) {
+  var $component = $('div.wrapper-component-d-b');
+
+  $component.find('div.wrapper-title').each(function () {
+    var $this = $(this);
+
+    $this.text(truncate($this.text().trim(), 14));
+  })
+
+  $component.find('div.wrapper-description').find('p').each(function () {
+    const $this = $(this);
+    const oldText = $this.text();
+    const newText = truncate(oldText, 80)
+    $this.html($this.html().replace(oldText, newText));
+  })
+
+  function truncate(str, no_words) {
+  return str.split(" ").splice(0, no_words).join(" ")
+  }
+
+  $component.each(function() {
+    var bgColor = $(this).css("backgroundColor");
+    if( bgColor === 'rgba(0, 0, 0, 0)') {
+      bgColor = '#FBF8EE'
+    }
+    $(this).find('.wrapper-link a').append('<span style="background:'+bgColor+'"></span>')
+  })
+  // Shorten text
+  // $('.wrapper-component-d-b .wrapper-title').each(function () {
+  //   var $this = $(this);
+  //   var currentText = $this.text().trim();
+  //   if (currentText.length > 60) {
+  //     $this.text(currentText.substring(0, 60) + '...');
+  //   }
+  // });
+  //
+  // $('.wrapper-component-d-b .wrapper-title').each(function () {
+  //   const currentText = $(this).text();
+  //   const truncatedText = truncate(currentText.trim(), 25);
+  //   $(this).text(truncatedText)
+  // })
+  //
+  // var $obj = $();
+  //
+  // $('.wrapper-component-d-b .wrapper-description.field--type-text-with-summary').each(function () {
+  //   var $this = $(this);
+  //   var $p = $this.find('p');
+  //
+  //   $obj = $obj.add($p.length ? $p : $this);
+  // });
+  //
+  // $obj.each(function () {
+  //   const currentText = $(this).text();
+  //   var truncatedText = truncate(currentText.trim(), 180);
+  //
+  //   if (truncatedText.length > 500) {
+  //     truncatedText = truncatedText.substring(0, 500) + '...';
+  //   }
+  //
+  //   $(this).text(truncatedText)
+  // })
+
+  $(function () {
+    window.addEventListener('load', AOS.refresh)
+    AOS.init({
+      offset: 200, duration: 2000,
+    })
+  });
+})(jQuery);

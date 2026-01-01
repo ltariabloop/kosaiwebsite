@@ -1,0 +1,240 @@
+
+(function ($) {
+    // $(window).bind('load', function(){
+    //     // $('.webform-submission-postcard-form .create-postcard--step-1 .form-item-prompt-question .form-select').select2('destroy');
+    // })
+    var postcardFormScreen = window.innerWidth;
+    $(document).ready(function(){
+        if(window.innerWidth > 767) {
+            $('.webform-submission-postcard-form .create-postcard--step-1 .form-item-prompt-question .form-select').select2({
+                minimumResultsForSearch: -1,
+                dropdownParent: $('.webform-submission-postcard-form .create-postcard--step-1 .form-item-prompt-question .select-wrapper'),
+                placeholder: 'Select your postcard prompt'
+            });
+        } else {
+            $('.webform-submission-postcard-form .create-postcard--step-1 .form-item-prompt-question .form-select option:first-child').text('Select your postcard prompt')
+        }
+        $('.webform-submission-postcard-form .create-postcard--step-1 .form-item-prompt-question .form-select').on('change', function(){
+            if ($(this).val()) {
+                $('.webform-submission-postcard-form .create-postcard--step-1 .form-item-next .btn-postcard-form-next').removeClass('disabled');
+                var $text = $(this).find('option[value="'+$(this).val()+'"]').text();
+                // update title on step 2 and 3
+                if(window.innerWidth < 768) {
+                    $('.create-postcard--step-2 .form-item-prompt-message > label').text('Fill the box below to preview your content above instantly.');
+                } else {
+                    $('.create-postcard--step-2 .form-item-prompt-message > label').text($text);
+                }
+                $('.create-postcard--step-3 .postcard-summary__title, .create-postcard--step-2 .postcard-preview__title').text($text);
+            } else {
+                $('.webform-submission-postcard-form .create-postcard--step-1 .form-item-next .btn-postcard-form-next').addClass('disabled')
+            }
+        });
+
+
+        // next and prev form step
+        var currentStep = 1;
+        function updateCurrentStep() {
+
+            $('.create-postcard--all-steps ul li').removeClass('active')
+            $('.create-postcard--all-steps ul li:nth-child('+currentStep+')').addClass('active');
+            
+            $('.webform-submission-postcard-form .view-media-postcard .slick__slider').slick('setPosition');
+            $('html, body').animate({
+                scrollTop: $('.webform-submission-postcard-form').offset().top
+            }, 500);
+            
+        }
+        $('.webform-submission-postcard-form .btn-postcard-form-next').on('click', function(e){
+            e.preventDefault();
+            if ($(this).hasClass('disabled')) {
+                return;
+            } else {
+                currentStep++;
+                $('.create-postcard--step').removeClass('active');
+                $(this).parents('.create-postcard--step').next('.create-postcard--step').addClass('active');
+                updateCurrentStep();
+            }
+        });
+        $('.webform-submission-postcard-form .btn-postcard-form-prev, .webform-submission-postcard-form .previous-btn').on('click', function(e){
+            e.preventDefault();
+            if ($(this).hasClass('disabled')) {
+                return;
+            } else {
+                currentStep--;
+                $('.create-postcard--step').removeClass('active');
+                $('.create-postcard--step-'+currentStep).addClass('active');
+                updateCurrentStep();
+            }
+        });
+        // append slide counter
+
+        const totalSlick = $('.webform-submission-postcard-form .view-media-postcard').find(`.slick-dots li`).length;
+        if (totalSlick > 0) {
+            var html = `<div class="slide-count"><span class="slide-count__current">1</span>/<span class="slide-count__total">${totalSlick}</span></div>`;
+            $('.webform-submission-postcard-form .view-media-postcard .slick__arrow').append(html);
+        }
+        if (!$('.webform-submission-postcard-form select[name="prompt_picture"]').val()) {
+            var defaultImageValue = $('.webform-submission-postcard-form .view-media-postcard .slick-slide.slick-current.slick-active .postcard-image-item').data('media-id');
+            $('.webform-submission-postcard-form select[name="prompt_picture"] option[value="'+defaultImageValue+'"]').prop('selected', true); 
+        } else {
+            var slickTargetSlide = jQuery('.slick-slide:not(.slick-cloned) [data-media-id="'+$('.webform-submission-postcard-form select[name="prompt_picture"]').val()+'"]').parents('.slick-slide').data('slick-index');
+            $('.slick--view--media-postcard .slick-slider').slick('slickGoTo', slickTargetSlide)
+        }
+        
+        // change current number and set value image select
+        $('.webform-submission-postcard-form .view-media-postcard .slick__slider').on('afterChange', function(slick, currentSlide){
+            var $current = currentSlide.currentSlide + 1;
+            $('.webform-submission-postcard-form .view-media-postcard .slide-count__current').html($current);
+            
+            // set value to select
+            var mediaID = $(currentSlide.$slides[currentSlide.currentSlide]).find('.postcard-image-item').data('media-id');
+            $('.webform-submission-postcard-form select[name="prompt_picture"] option[value="'+mediaID+'"]').prop('selected', true); 
+        });
+        // textarea counter
+        $('.webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message .form-textarea-wrapper ').append('<div class="textarea-counter"><span>0</span>/400<div>');
+        $('.webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message .form-textarea-wrapper textarea.form-control').on('input', function(){
+            var $length = $(this).val().length;
+            $('.textarea-counter span').text($length);
+            if ($(this).val()) {    
+                $('.webform-submission-postcard-form .create-postcard--step-2 .btn-postcard-form-next').removeClass('disabled');
+            } else {
+                $('.webform-submission-postcard-form .create-postcard--step-2 .btn-postcard-form-next').addClass('disabled');
+            }
+            // update content on step 3, preview step 2
+            $('.webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary .postcard-summary__content, .webform-submission-postcard-form .create-postcard--step-2 .postcard-preview__content').text($(this).val());
+        });
+        // update image step 3
+        $('.webform-submission-postcard-form .create-postcard--step-2 .btn-postcard-form-next').on('click', function(){
+            var mediaID = $('.webform-submission-postcard-form select[name="prompt_picture"]').val();
+            var imageURL = $('.webform-submission-postcard-form .create-postcard--step-2 .postcard-image-item[data-media-id="'+mediaID+'"] .field--type-image img').attr('src');
+            $('.webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary .postcard-summary__img img').attr('src', imageURL);
+
+        })
+        // move form actions
+        var formActions = $('.webform-submission-postcard-form .form-actions');
+        if(window.innerWidth >= 768) {
+            $('.webform-submission-postcard-form .create-postcard--step-3 .submit-container').append($(formActions));
+        } else {
+            $('.webform-submission-postcard-form .create-postcard--step-3').append($(formActions));
+        }
+        // check validation
+        function checkStatus() {
+            var $subject = $('.webform-submission-postcard-form .create-postcard--step-1 .form-item-prompt-question .form-select');
+            if ($subject.val()) {   
+                var $text = $subject.find('option[value="'+$subject.val()+'"]').text();
+                // update title on step 2 and 3
+                if(window.innerWidth < 768) {
+                    $('.create-postcard--step-2 .form-item-prompt-message > label').text('Fill the box below to preview your content above instantly.');
+                } else {
+                    $('.create-postcard--step-2 .form-item-prompt-message > label').text($text);
+                }
+                $('.webform-submission-postcard-form .create-postcard--step-1 .form-item-next .btn-postcard-form-next').removeClass('disabled');
+
+                $('.create-postcard--step-3 .postcard-summary__title, .create-postcard--step-2 .postcard-preview__title').text($text);
+            }
+
+
+            var mediaID = $('.webform-submission-postcard-form select[name="prompt_picture"]').val();
+            var imageURL = $('.webform-submission-postcard-form .create-postcard--step-2 .postcard-image-item[data-media-id="'+mediaID+'"] .field--type-image img').attr('src');
+            $('.webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary .postcard-summary__img img').attr('src', imageURL);
+
+            var $message = $('.create-postcard--step-2 .form-item-prompt-message .form-textarea-wrapper textarea.form-control');
+            var $length = $message.val().length;
+            $('.textarea-counter span').text($length);
+            if ($message.val()) {    
+                $('.webform-submission-postcard-form .create-postcard--step-2 .btn-postcard-form-next').removeClass('disabled');
+            } else {
+                $('.webform-submission-postcard-form .create-postcard--step-2 .btn-postcard-form-next').addClass('disabled');
+            }
+            // update content on step 3, preview step 2
+            $('.webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary .postcard-summary__content, .webform-submission-postcard-form .create-postcard--step-2 .postcard-preview__content').text($message.val());
+            
+            
+            if ($('.create-postcard--step-1 .form-item--error-message').length) {
+                currentStep = 1;
+                $('.create-postcard--step').removeClass('active');
+                $('.create-postcard--step-1').addClass('active');
+                updateCurrentStep()
+            }
+            else if ($('.create-postcard--step-2 .form-item--error-message').length) {
+                currentStep = 2;
+                $('.create-postcard--step').removeClass('active');
+                $('.create-postcard--step-2').addClass('active');
+                updateCurrentStep()
+            }
+            else if ($('.create-postcard--step-3 .form-item--error-message').length) {
+                currentStep = 3;
+                $('.create-postcard--step').removeClass('active');
+                $('.create-postcard--step-3').addClass('active');
+                updateCurrentStep()
+            }
+            if ($('.webform-submission-postcard-form .messages__wrapper .alert p').length) {
+                if ($('.webform-submission-postcard-form .messages__wrapper .alert p').html().includes('CAPTCHA')) {
+                    currentStep = 3;
+                    $('.create-postcard--step').removeClass('active');
+                    $('.create-postcard--step-3').addClass('active');
+                    updateCurrentStep()
+                }
+            }
+        }
+        checkStatus();
+
+        // filter property
+        var propertyOptions = $('.create-postcard--step-3 #edit-property option').clone();
+        if(!$('.create-postcard--step-3 #edit-country').val()) {
+            $('.create-postcard--step-3 #edit-property').prop('disabled', true);
+        } else {
+            var $val = parseInt($('.create-postcard--step-3 #edit-country').val());
+            
+            $('.create-postcard--step-3 #edit-property').empty();
+
+            
+            var newOption = propertyOptions.filter(function () {
+                return $val  === '' || $(this).data('country-id') === $val;
+                }) 
+            $('.create-postcard--step-3 #edit-property').append(propertyOptions[0]);
+            $('.create-postcard--step-3 #edit-property').append(newOption).trigger('change.select2');
+            $('.create-postcard--step-3 #edit-property').prop('disabled', false);
+        }
+        $('.create-postcard--step-3 #edit-country').on('change', function() {
+            var $val = parseInt($(this).val());
+            
+            $('.create-postcard--step-3 #edit-property').empty();
+
+            
+            var newOption = propertyOptions.filter(function () {
+                return $val  === '' || $(this).data('country-id') === $val;
+                }) 
+            $('.create-postcard--step-3 #edit-property').append(propertyOptions[0]);
+            $('.create-postcard--step-3 #edit-property').append(newOption).val(null).trigger('change.select2');
+            $('.create-postcard--step-3 #edit-property').prop('disabled', false);
+        });
+
+        $('.create-postcard--step-3 #edit-property').on('change', function() {
+            var $val = parseInt($(this).val());
+            if ($val) {
+                $(this).next().removeClass('error');
+                $(this).parent().find('.form-item--error-message').fadeOut(0);
+            }
+        })
+    });
+    function updateContent(){
+        var $subject = $('.webform-submission-postcard-form .create-postcard--step-1 .form-item-prompt-question .form-select')
+        if ($subject.val()) {   
+            var $text = $subject.find('option[value="'+$subject.val()+'"]').text();
+            // update title on step 2 and 3
+            if(window.innerWidth < 768) {
+                $('.create-postcard--step-2 .form-item-prompt-message > label').text('Fill the box below to preview your content above instantly.');
+            } else {
+                $('.create-postcard--step-2 .form-item-prompt-message > label').text($text);
+            }
+        }
+    }
+    $(window).bind('resize', function(){
+        if (postcardFormScreen != window.innerWidth) {
+            postcardFormScreen = window.innerWidth;
+            updateContent();
+        }
+    })    
+
+})(jQuery);

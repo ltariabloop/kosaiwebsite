@@ -1,0 +1,219 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
+ */
+@import url("https://use.typekit.net/kxs7kia.css");
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  overflow-x: hidden;
+}
+
+.hero-banner-a-wrapper {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.hero-banner-a {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 480px) {
+  .hero-banner-a .wrapper-video {
+    display: none;
+  }
+}
+.hero-banner-a .wrapper-video-mobile {
+  display: none;
+}
+@media only screen and (max-width: 480px) {
+  .hero-banner-a .wrapper-video-mobile {
+    display: block;
+  }
+}
+.hero-banner-a .wrapper-video.opacity-part .field--name-field-video-bg:before, .hero-banner-a .wrapper-video-mobile.opacity-part .field--name-field-video-bg:before {
+  content: "";
+  width: 100%;
+  height: 322px;
+  background: transparent linear-gradient(180deg, #000000 0%, transparent 100%) 0% 0% no-repeat padding-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: var(--custom-opacity-header);
+}
+@media only screen and (max-width: 1024px) {
+  .hero-banner-a .wrapper-video.opacity-part .field--name-field-video-bg:before, .hero-banner-a .wrapper-video-mobile.opacity-part .field--name-field-video-bg:before {
+    height: 50%;
+  }
+}
+.hero-banner-a .wrapper-video.opacity-part .field--name-field-video-bg:after, .hero-banner-a .wrapper-video-mobile.opacity-part .field--name-field-video-bg:after {
+  content: "";
+  width: 100%;
+  height: 400px;
+  background: transparent linear-gradient(0deg, #000000 0%, transparent 100%) 0% 0% no-repeat padding-box;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: var(--custom-opacity-bottom);
+}
+@media only screen and (max-width: 1024px) {
+  .hero-banner-a .wrapper-video.opacity-part .field--name-field-video-bg:after, .hero-banner-a .wrapper-video-mobile.opacity-part .field--name-field-video-bg:after {
+    height: 50%;
+  }
+}
+.hero-banner-a .wrapper-video .field--name-field-media-video-file .field--item, .hero-banner-a .wrapper-video-mobile .field--name-field-media-video-file .field--item {
+  height: 640px;
+}
+@media only screen and (max-width: 767px) {
+  .hero-banner-a .wrapper-video .field--name-field-media-video-file .field--item, .hero-banner-a .wrapper-video-mobile .field--name-field-media-video-file .field--item {
+    height: 530px;
+  }
+}
+.hero-banner-a .wrapper-video .field--name-field-media-video-file video, .hero-banner-a .wrapper-video-mobile .field--name-field-media-video-file video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-banner-a .wrapper-image .field--name-field-image {
+  height: 640px;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .hero-banner-a .wrapper-image .field--name-field-image {
+    height: 530px;
+  }
+}
+.hero-banner-a .wrapper-image.opacity-part .field--name-field-image:before {
+  content: "";
+  width: 100%;
+  height: 322px;
+  background: transparent linear-gradient(180deg, #000000 0%, transparent 100%) 0% 0% no-repeat padding-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: var(--custom-opacity-header);
+}
+@media only screen and (max-width: 1024px) {
+  .hero-banner-a .wrapper-image.opacity-part .field--name-field-image:before {
+    height: 50%;
+  }
+}
+.hero-banner-a .wrapper-image.opacity-part .field--name-field-image:after {
+  content: "";
+  width: 100%;
+  height: 400px;
+  background: transparent linear-gradient(0deg, #000000 0%, transparent 100%) 0% 0% no-repeat padding-box;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: var(--custom-opacity-bottom);
+}
+@media only screen and (max-width: 1024px) {
+  .hero-banner-a .wrapper-image.opacity-part .field--name-field-image:after {
+    height: 50%;
+  }
+}
+.hero-banner-a .wrapper-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-banner-a .wrapper-caption {
+  padding-right: 50px;
+  position: absolute;
+  color: #fff;
+  bottom: 88px;
+  width: 100%;
+}
+@media only screen and (max-width: 1920px) {
+  .hero-banner-a .wrapper-caption {
+    padding-left: 140px;
+  }
+}
+@media (max-width: 1023px) {
+  .hero-banner-a .wrapper-caption {
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .hero-banner-a .wrapper-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: unset;
+  }
+}
+.hero-banner-a .wrapper-caption .wrapper-title {
+  max-width: 60%;
+}
+@media (max-width: 1023px) {
+  .hero-banner-a .wrapper-caption .wrapper-title {
+    max-width: 667px;
+  }
+}
+.hero-banner-a .wrapper-caption h1 {
+  margin: 0 0 10px;
+  color: #fff;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .hero-banner-a .wrapper-caption h1 {
+    font-size: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .hero-banner-a .wrapper-caption h1 {
+    font-size: 48px;
+    max-width: unset;
+    line-height: 56px;
+  }
+}
+.hero-banner-a .wrapper-caption .wrapper-content {
+  font-size: 30px;
+}
+@media only screen and (max-width: 767px) {
+  .hero-banner-a .wrapper-caption .wrapper-content {
+    font-size: 20px;
+  }
+}
+
+/*# sourceMappingURL=hero_header1.css.map */

@@ -1,0 +1,28 @@
+(function ($) {
+  // Shorten text
+  $('.wrapper-component-w-a .wrapper-title').each(function() {
+    const currentText = $(this).text();
+    const truncatedText = truncate(currentText.trim(), 12);
+    $(this).text(truncatedText)
+  })
+
+  $('.wrapper-component-w-a .wrapper-content p').each(function() {
+    const currentText = $(this).text();
+    const truncatedText = truncate(currentText.trim(), 80);
+    $(this).text(truncatedText)
+  })
+
+  function truncate(str, no_words) {
+    return str.split(" ").splice(0, no_words).join(" ");
+  }
+
+  // Parallax for all images in this component
+  const images = $('.wrapper-component-w-a img')
+  for (let i = 0; i <= images.length; i++) {
+    new simpleParallax(images[i], {
+      delay: .6,
+      transition: 'cubic-bezier(0,0,0,1)'
+    })
+  }
+  
+} (jQuery))

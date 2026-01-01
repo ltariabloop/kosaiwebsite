@@ -1,0 +1,181 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
+ */
+@import url("https://use.typekit.net/kxs7kia.css");
+@font-face {
+  font-family: "Avenir";
+  src: url("https://www.groupbanyan.com/themes/custom/banyantree/dist/fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: normal; }
+@font-face {
+  font-family: "Avenir";
+  src: url("https://www.groupbanyan.com/themes/custom/banyantree/dist/fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: "Avenir";
+  src: url("https://www.groupbanyan.com/themes/custom/banyantree/dist/fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: "Avenir";
+  src: url("https://www.groupbanyan.com/themes/custom/banyantree/dist/fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: "Avenir";
+  src: url("https://www.groupbanyan.com/themes/custom/banyantree/dist/fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+.wrapper-component_n_cards_no_slider {
+  width: 100%;
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 80px 0 100px; }
+  .wrapper-component_n_cards_no_slider .wrapper-title {
+    font-family: "Avenir", Arial, sans-serif;
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 1.143;
+    color: #000;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    margin-bottom: 70px; }
+    @media only screen and (max-width: 1024px) {
+      .wrapper-component_n_cards_no_slider .wrapper-title {
+        font-size: 45px;
+        line-height: 1; } }
+    @media only screen and (max-width: 767px) {
+      .wrapper-component_n_cards_no_slider .wrapper-title {
+        font-size: 24px;
+        line-height: 32px; } }
+  @media only screen and (max-width: 767px) {
+    .wrapper-component_n_cards_no_slider .wrapper-sliders {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw; } }
+  .wrapper-component_n_cards_no_slider .field--name-field-cards-slider {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px 3.04878%;
+    padding-bottom: 55px; }
+    @media only screen and (max-width: 1023px) {
+      .wrapper-component_n_cards_no_slider .field--name-field-cards-slider {
+        gap: 70px 50px; } }
+    @media only screen and (max-width: 767px) {
+      .wrapper-component_n_cards_no_slider .field--name-field-cards-slider {
+        padding-bottom: 15px;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 0; } }
+    .wrapper-component_n_cards_no_slider .field--name-field-cards-slider:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .wrapper-component_n_cards_no_slider .field--name-field-cards-slider > .field--item {
+      width: 31.28049%; }
+      @media only screen and (max-width: 1023px) {
+        .wrapper-component_n_cards_no_slider .field--name-field-cards-slider > .field--item {
+          width: calc((100% - 50px) / 2); } }
+      @media only screen and (max-width: 767px) {
+        .wrapper-component_n_cards_no_slider .field--name-field-cards-slider > .field--item {
+          flex: 0 0 auto;
+          width: 300px;
+          margin-right: 0;
+          margin-left: 30px; } }
+      .wrapper-component_n_cards_no_slider .field--name-field-cards-slider > .field--item:nth-child(3n+3) {
+        margin-right: 0; }
+      @media only screen and (max-width: 1023px) {
+        .wrapper-component_n_cards_no_slider .field--name-field-cards-slider > .field--item:last-child {
+          margin-right: 0; } }
+    .wrapper-component_n_cards_no_slider .field--name-field-cards-slider .field--name-field-image {
+      margin-bottom: 40px; }
+      .wrapper-component_n_cards_no_slider .field--name-field-cards-slider .field--name-field-image img {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover; }
+        @media only screen and (max-width: 490px) {
+          .wrapper-component_n_cards_no_slider .field--name-field-cards-slider .field--name-field-image img {
+            max-height: 240px; } }
+    .wrapper-component_n_cards_no_slider .field--name-field-cards-slider .field--name-field-title {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-family: "Avenir", Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.3636364;
+      height: 60px;
+      margin-bottom: 20px; }
+      @media only screen and (max-width: 1024px) {
+        .wrapper-component_n_cards_no_slider .field--name-field-cards-slider .field--name-field-title {
+          font-size: 16px;
+          line-height: 1; } }
+      @media only screen and (max-width: 1023px) {
+        .wrapper-component_n_cards_no_slider .field--name-field-cards-slider .field--name-field-title {
+          height: 45px; } }
+    .wrapper-component_n_cards_no_slider .field--name-field-cards-slider .field--name-field-content {
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      min-height: 125px;
+      margin-bottom: 35px;
+      color: #898D8D; }
+      @media (max-width: 1024px) {
+        .wrapper-component_n_cards_no_slider .field--name-field-cards-slider .field--name-field-content {
+          min-height: 115px; } }
+    .wrapper-component_n_cards_no_slider .field--name-field-cards-slider .field--name-field-link a {
+      display: inline-block;
+      padding-bottom: 6px;
+      text-transform: uppercase;
+      text-decoration: none !important;
+      transition: all .3s ease-in-out;
+      position: relative;
+      font-weight: 500; }
+      @media (max-width: 1024px) {
+        .wrapper-component_n_cards_no_slider .field--name-field-cards-slider .field--name-field-link a {
+          font-size: 16px; } }
+      .wrapper-component_n_cards_no_slider .field--name-field-cards-slider .field--name-field-link a:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #121113;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1; }
+      .wrapper-component_n_cards_no_slider .field--name-field-cards-slider .field--name-field-link a:after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 1px;
+        background-color: #FBF8EE;
+        position: absolute;
+        left: -10px;
+        bottom: 0;
+        z-index: 2;
+        transition: all .3s ease-in-out; }
+      .wrapper-component_n_cards_no_slider .field--name-field-cards-slider .field--name-field-link a:hover {
+        color: #000; }
+        .wrapper-component_n_cards_no_slider .field--name-field-cards-slider .field--name-field-link a:hover:after {
+          left: calc(100% + 10px); }
+  .wrapper-component_n_cards_no_slider .field--name-field-content-collapse > .field--item:last-child > .paragraph {
+    border-bottom: 0; }
+
+/*# sourceMappingURL=component_n_cards_no_slider.css.map */

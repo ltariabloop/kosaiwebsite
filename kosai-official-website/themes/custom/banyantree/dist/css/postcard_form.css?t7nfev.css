@@ -1,0 +1,1084 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
+ */
+@import url("https://use.typekit.net/kxs7kia.css");
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Heavy-05.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+.webform-submission-postcard-form {
+  padding: 97px 0 83px;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form {
+    padding: 58px 0 79px;
+  }
+}
+.webform-submission-postcard-form .select-wrapper:after {
+  content: none;
+}
+.webform-submission-postcard-form .select2 {
+  max-width: 100%;
+  min-width: 100%;
+}
+.webform-submission-postcard-form .select2-dropdown {
+  background-color: #F7F5EC;
+}
+.webform-submission-postcard-form .form-item-title .block-title {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 61px;
+  margin-top: 0;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .form-item-title .block-title {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 52px;
+  }
+}
+.webform-submission-postcard-form .create-postcard--all-steps {
+  margin-bottom: 0;
+}
+.webform-submission-postcard-form .create-postcard--all-steps ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 74px;
+  width: 421px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.webform-submission-postcard-form .create-postcard--all-steps ul::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #003824;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.webform-submission-postcard-form .create-postcard--all-steps ul li {
+  width: 69px;
+  height: 69px;
+  border-radius: 50%;
+  background-color: #695647;
+  color: rgba(191, 241, 67, 0.4);
+  transition: color 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+.webform-submission-postcard-form .create-postcard--all-steps ul li.active {
+  color: #D1C7B3;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--all-steps ul {
+    margin-bottom: 54px;
+  }
+  .webform-submission-postcard-form .create-postcard--all-steps ul li {
+    width: 55px;
+    height: 55px;
+  }
+}
+.webform-submission-postcard-form .create-postcard--step {
+  display: none;
+  margin-bottom: 0;
+}
+.webform-submission-postcard-form .create-postcard--step.active {
+  display: block;
+}
+.webform-submission-postcard-form .form-item--error-message {
+  color: #ff0000;
+  font-size: 12px;
+  line-height: 1;
+  margin-top: 6px;
+}
+.webform-submission-postcard-form .previous-btn,
+.webform-submission-postcard-form .btn-postcard-form-prev {
+  background-color: transparent;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #695647;
+  border: 1px solid #695647;
+  padding: 16px 44px;
+  transition: all 0.4s ease;
+  border-radius: 28px;
+  text-decoration: none;
+  min-width: 158px;
+}
+.webform-submission-postcard-form .previous-btn.disabled,
+.webform-submission-postcard-form .btn-postcard-form-prev.disabled {
+  cursor: not-allowed;
+  border-color: #a8a8a8;
+  color: #a8a8a8;
+}
+@media (hover: hover) {
+  .webform-submission-postcard-form .previous-btn:not(.disabled):hover,
+  .webform-submission-postcard-form .btn-postcard-form-prev:not(.disabled):hover {
+    border-color: #695647;
+    color: #fff;
+    background-color: #695647;
+  }
+}
+.webform-submission-postcard-form .form-actions .form-submit,
+.webform-submission-postcard-form .btn-postcard-form-next {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #F7F5EC;
+  background-color: #695647;
+  padding: 17px 44px;
+  transition: all 0.4s ease;
+  border-radius: 28px;
+  border: none;
+  text-decoration: none;
+  min-width: 158px;
+}
+.webform-submission-postcard-form .form-actions .form-submit.disabled,
+.webform-submission-postcard-form .btn-postcard-form-next.disabled {
+  cursor: not-allowed;
+  background-color: #a8a8a8;
+  color: #F7F5EC;
+}
+@media (hover: hover) {
+  .webform-submission-postcard-form .form-actions .form-submit:not(.disabled):hover,
+  .webform-submission-postcard-form .btn-postcard-form-next:not(.disabled):hover {
+    background-color: #D1C7B3;
+    color: #695647;
+  }
+}
+.webform-submission-postcard-form .create-postcard--title {
+  margin-bottom: 43px;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--title {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 39px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.webform-submission-postcard-form .create-postcard--step-1 {
+  padding-bottom: 219px;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-1 {
+    padding-bottom: 0;
+  }
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select {
+  margin-bottom: 0;
+  max-width: 835px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 55px;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .form-item--error-message {
+  order: 2;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper::after {
+  content: none;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper select {
+  border: 1px solid #003824;
+  font-size: 18px;
+  line-height: 24px;
+  background-image: url('data:image/svg+xml,<svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0291 8.62501L13.1288 5.26479C14.575 3.69814 16.0217 2.1319 17.4689 0.566074C17.922 0.077089 18.5188 -0.0594297 19.1176 0.166446C19.6964 0.384256 20.0673 0.894959 19.9898 1.48881C19.9526 1.77309 19.8309 2.04212 19.6382 2.26573C16.8184 5.34733 13.9891 8.42044 11.1505 11.4851C10.5082 12.1788 9.53516 12.1677 8.89357 11.4751C6.04517 8.38859 3.19943 5.30017 0.356375 2.20988C-0.170934 1.63526 -0.104102 0.796914 0.497392 0.326546C1.12963 -0.169886 1.98642 -0.0935595 2.54314 0.509604C4.92104 3.08691 7.29828 5.66483 9.67484 8.24338C9.7791 8.36252 9.88938 8.47608 10.0291 8.62501Z" fill="%23626161"/></svg>');
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: right 30px center;
+  background-color: #F7F5EC;
+  padding: 16px 50px 16px 30px;
+  height: auto;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: none;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-container .selection .select2-selection {
+  height: auto;
+  border: 1px solid #003824;
+  border-radius: 10px;
+  background-color: #F7F5EC;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-container .selection .select2-selection__rendered {
+  padding: 27px 50px 27px 30px;
+  font-size: 20px;
+  line-height: 26px;
+  color: #695647;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-container .selection .select2-selection__placeholder {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: rgba(18, 17, 19, 0.5);
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-container .selection .select2-selection__clear {
+  display: none;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-container .selection .select2-selection__arrow {
+  background-image: url('data:image/svg+xml,<svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0291 8.62501L13.1288 5.26479C14.575 3.69814 16.0217 2.1319 17.4689 0.566074C17.922 0.077089 18.5188 -0.0594297 19.1176 0.166446C19.6964 0.384256 20.0673 0.894959 19.9898 1.48881C19.9526 1.77309 19.8309 2.04212 19.6382 2.26573C16.8184 5.34733 13.9891 8.42044 11.1505 11.4851C10.5082 12.1788 9.53516 12.1677 8.89357 11.4751C6.04517 8.38859 3.19943 5.30017 0.356375 2.20988C-0.170934 1.63526 -0.104102 0.796914 0.497392 0.326546C1.12963 -0.169886 1.98642 -0.0935595 2.54314 0.509604C4.92104 3.08691 7.29828 5.66483 9.67484 8.24338C9.7791 8.36252 9.88938 8.47608 10.0291 8.62501Z" fill="%23626161"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 30px;
+  top: 50%;
+  height: 20px;
+  margin-top: -10px;
+  background-size: contain;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-container .selection .select2-selection__arrow b {
+  display: none;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-container.select2-container--below.select2-container--open .selection .select2-selection {
+  border-radius: 10px 10px 0 0;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-container.select2-container--below.select2-container--open .selection .select2-selection__arrow {
+  transform: rotate(180deg);
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-container.select2-container--open.select2-container--above .selection .select2-selection {
+  border-radius: 0 0 10px 10px;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-dropdown {
+  border-color: #003824;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-dropdown.select2-dropdown--below {
+  border-radius: 0 0 10px 10px;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-dropdown.select2-dropdown--below .select2-results {
+  border-radius: 0 0 10px 10px;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-dropdown.select2-dropdown--above {
+  border-radius: 10px 10px 0 0;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-dropdown.select2-dropdown--above .select2-results {
+  border-radius: 10px 10px 0 0;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-results {
+  overflow: hidden;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-results > .select2-results__options {
+  max-height: 318px;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-results > .select2-results__options::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: transparent;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-results > .select2-results__options::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-results > .select2-results__options::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-results__option {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  padding: 13px 30px;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-results__option--highlighted[aria-selected] {
+  background-color: #bebebe;
+  color: #6F6A37;
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-results__option[aria-selected=true] {
+  background-color: #695647;
+  color: #F7F5EC;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-1 .form-type-select {
+    margin-bottom: 44px;
+  }
+  .webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-container .selection .select2-selection__rendered {
+    padding: 16px 50px 16px 30px;
+  }
+  .webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-container .selection .select2-selection__rendered, .webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-container .selection .select2-selection__placeholder {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .webform-submission-postcard-form .create-postcard--step-1 .form-type-select .select-wrapper .select2-container .selection .select2-selection__arrow {
+    width: 15px;
+  }
+}
+.webform-submission-postcard-form .create-postcard--step-1 .form-item-next {
+  text-align: center;
+}
+.webform-submission-postcard-form .create-postcard--step-2 {
+  position: relative;
+}
+@media only screen and (max-width: 1920px) {
+  .webform-submission-postcard-form .create-postcard--step-2 {
+    margin: 0 -140px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .webform-submission-postcard-form .create-postcard--step-2 {
+    margin: 0 -60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-2 {
+    margin: 0 -30px;
+  }
+}
+.webform-submission-postcard-form .create-postcard--step-2 .form-item-next-prev > p {
+  display: flex;
+  gap: 0 63px;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-2 .form-item-next-prev > p {
+    gap: 0 19px;
+  }
+}
+.webform-submission-postcard-form .create-postcard--step-2 .form-item-card-preview-mobile {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 768px) {
+  .webform-submission-postcard-form .create-postcard--step-2 .form-item-card-preview-mobile {
+    display: none;
+  }
+}
+.webform-submission-postcard-form .create-postcard--step-2 .form-item-card-preview-mobile .postcard-preview__info {
+  background-color: #F7F5EC;
+  position: relative;
+  z-index: 2;
+  padding: 16px 16px 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background-image: url("../../images/bg/postcard-bottom.svg"), url("../../images/bg/postcard-top.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 16px right 16px, top 16px right 16px;
+  background-size: 158px, 26px;
+}
+.webform-submission-postcard-form .create-postcard--step-2 .form-item-card-preview-mobile .postcard-preview__title {
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 1.3;
+  color: #695647;
+  margin-bottom: 30px;
+  padding-right: 30px;
+  max-width: 400px;
+  margin-top: 0;
+}
+.webform-submission-postcard-form .create-postcard--step-2 .form-item-card-preview-mobile .postcard-preview__content {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #5564ca;
+  word-break: break-word;
+}
+.webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-picture {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+.webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message {
+  padding: 37px 50px 174px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1490196078);
+  max-width: 936px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 62px;
+  background-image: url("../../images/bg/postcard-bottom.svg"), url("../../images/bg/postcard-top.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 50px right 60px, top 37px right 41px;
+  background-size: 424px, 71px;
+}
+.webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message > label {
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 34px;
+  color: #003824;
+  padding-right: 75px;
+  max-width: 625px;
+  margin-bottom: 45px;
+}
+.webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message > label::after {
+  content: none;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message > label {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+}
+.webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message .description .webform-element-description {
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 34px;
+  color: #003824;
+  padding-right: 75px;
+  max-width: 625px;
+  margin-bottom: 45px;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message .description .webform-element-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message {
+    padding: 0 20px;
+    margin-top: 36px;
+    background: #F7F5EC;
+    margin-bottom: 27px;
+    box-shadow: none;
+  }
+}
+.webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message textarea.form-control {
+  padding: 21px 30px;
+  resize: none;
+  height: 250px;
+  outline: none;
+  border-radius: 0;
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+  font-size: 25px;
+  line-height: 34px;
+  color: #695647;
+  box-shadow: none;
+}
+.webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message textarea.form-control::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: transparent;
+}
+.webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message textarea.form-control::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+.webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message textarea.form-control::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message textarea.form-control {
+    font-size: 16px;
+    line-height: 1.4;
+    height: 309px;
+    padding: 21px 26px 38px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.5);
+  }
+}
+.webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message textarea.form-control::placeholder {
+  color: #5564ca;
+}
+.webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message .textarea-counter {
+  margin-top: 9px;
+  text-align: right;
+  font-size: 20px;
+  line-height: 27px;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-2 .form-item-prompt-message .textarea-counter {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 7px;
+  }
+}
+.webform-submission-postcard-form .view-media-postcard {
+  margin-bottom: 86px;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .view-media-postcard {
+    margin-bottom: 61px;
+  }
+}
+.webform-submission-postcard-form .view-media-postcard .postcard-image-item .field--name-field-media-image {
+  display: flex;
+  align-items: center;
+}
+.webform-submission-postcard-form .view-media-postcard .postcard-image-item .field--name-field-media-image .field--item {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  transition: opacity 0.4s ease;
+  padding-top: 66.1666666667%;
+}
+.webform-submission-postcard-form .view-media-postcard .postcard-image-item .field--name-field-media-image .field--item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+.webform-submission-postcard-form .view-media-postcard .slick--view {
+  position: relative;
+}
+.webform-submission-postcard-form .view-media-postcard .slick--view .slick-dots {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.webform-submission-postcard-form .view-media-postcard .slick--view .slick__arrow {
+  position: absolute;
+  right: 277px;
+  top: 54px;
+  transform: translateX(100%);
+  display: flex;
+  align-items: center;
+  gap: 0 16px;
+  padding-left: 20px;
+}
+@media (max-width: 1199px) {
+  .webform-submission-postcard-form .view-media-postcard .slick--view .slick__arrow {
+    position: static;
+    transform: none;
+    justify-content: center;
+    margin-top: 35px;
+    padding-left: 0;
+  }
+}
+.webform-submission-postcard-form .view-media-postcard .slick--view .slick__arrow .slide-count {
+  font-size: 32px;
+  line-height: 40px;
+  display: flex;
+  align-items: flex-end;
+}
+.webform-submission-postcard-form .view-media-postcard .slick--view .slick__arrow .slide-count span {
+  display: block;
+}
+.webform-submission-postcard-form .view-media-postcard .slick--view .slick__arrow .slide-count__total {
+  line-height: 30px;
+  font-size: 14px;
+}
+.webform-submission-postcard-form .view-media-postcard .slick--view .slick__arrow .slick-arrow {
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid #695647;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 0;
+  transition: all 0.4s ease;
+  outline: none;
+}
+.webform-submission-postcard-form .view-media-postcard .slick--view .slick__arrow .slick-arrow.slick-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+@media (hover: hover) {
+  .webform-submission-postcard-form .view-media-postcard .slick--view .slick__arrow .slick-arrow:not(.slick-disabled):hover {
+    filter: invert(1);
+    border-color: #fff;
+    background-color: #fff;
+  }
+}
+.webform-submission-postcard-form .view-media-postcard .slick--view .slick__arrow .slick-arrow.slick-prev {
+  order: -1;
+  background-image: url("../../images/icons/arrow-left.svg");
+}
+.webform-submission-postcard-form .view-media-postcard .slick--view .slick__arrow .slick-arrow.slick-next {
+  order: 2;
+  background-image: url("../../images/icons/arrow-right.svg");
+}
+.webform-submission-postcard-form .view-media-postcard .slick-list {
+  padding-left: 277px !important;
+  padding-right: 277px !important;
+}
+@media (max-width: 1199px) {
+  .webform-submission-postcard-form .view-media-postcard .slick-list {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+  }
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .view-media-postcard .slick-list {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+.webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 34px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 25px;
+  }
+}
+.webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide .slick__slide {
+  display: block !important;
+}
+.webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide::after {
+  transform: scale(0);
+  transition: transform 0.4s ease;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 68px;
+  height: 68px;
+  margin-left: -34px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../../images/icons/check-circle.svg");
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide::after {
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+  }
+}
+.webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide.slick-center::after {
+  transform: scale(1);
+  transition-delay: 600ms;
+}
+@media (min-width: 768px) {
+  .webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide .postcard-image-item .field--name-field-media-image .field--item, .webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide[aria-hidden=true]:not(.slick-cloned) ~ .slick-cloned[aria-hidden=true] .postcard-image-item .field--name-field-media-image .field--item {
+    opacity: 0.5;
+  }
+  .webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide .postcard-image-item .field--name-field-media-image .field--item img, .webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide[aria-hidden=true]:not(.slick-cloned) ~ .slick-cloned[aria-hidden=true] .postcard-image-item .field--name-field-media-image .field--item img {
+    height: 58%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide.slick-center .postcard-image-item .field--name-field-media-image .field--item, .webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide[aria-hidden=true]:not([tabindex="-1"]) + .slick-cloned[aria-hidden=true] .postcard-image-item .field--name-field-media-image .field--item {
+    opacity: 1;
+  }
+  .webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide.slick-center .postcard-image-item .field--name-field-media-image .field--item img, .webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide[aria-hidden=true]:not([tabindex="-1"]) + .slick-cloned[aria-hidden=true] .postcard-image-item .field--name-field-media-image .field--item img {
+    height: 100%;
+    top: 0;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide .postcard-image-item .field--name-field-media-image .field--item, .webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide[aria-hidden=true]:not(.slick-cloned) ~ .slick-cloned[aria-hidden=true] .postcard-image-item .field--name-field-media-image .field--item {
+    opacity: 0.5;
+  }
+  .webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide.slick-center .postcard-image-item .field--name-field-media-image .field--item, .webform-submission-postcard-form .view-media-postcard .slick-list .slick-slide[aria-hidden=true]:not([tabindex="-1"]) + .slick-cloned[aria-hidden=true] .postcard-image-item .field--name-field-media-image .field--item {
+    opacity: 1;
+  }
+}
+.webform-submission-postcard-form .form-required:after {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 0;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary::after {
+  z-index: 3;
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: -30px;
+  right: -30px;
+  bottom: 0;
+  top: 0;
+  background: linear-gradient(180deg, rgba(251, 248, 238, 0) 0%, rgba(251, 248, 238, 0.6) 27.56%, #F7F5EC 78.52%);
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary::after {
+    bottom: -130px;
+    left: 0;
+    right: 0;
+  }
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary .postcard-summary {
+  max-width: 1121px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary .postcard-summary__img {
+  overflow: hidden;
+  position: relative;
+  height: 373px;
+  transform: rotate(2.26deg);
+  width: 52%;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary .postcard-summary__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary .postcard-summary__img {
+    height: 125px;
+    width: 57%;
+  }
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary .postcard-summary__info {
+  background-color: #F7F5EC;
+  position: relative;
+  z-index: 2;
+  margin-left: -4%;
+  transform: rotate(-0.96deg);
+  width: 54%;
+  padding: 28px 28px 108px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background-image: url("../../images/bg/postcard-bottom.svg"), url("../../images/bg/postcard-top.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 18px right 27px, top 27px right 27px;
+  background-size: 270px, 45px;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary .postcard-summary__info {
+    padding: 9px 9px 36px;
+    background-position: bottom 9px right 9px, top 9px right 9px;
+    background-size: 90px, 15px;
+    width: 64%;
+    margin-left: -14%;
+    margin-top: 20px;
+  }
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary .postcard-summary__title {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  color: #695647;
+  margin-bottom: 47px;
+  padding-right: 50px;
+  max-width: 400px;
+  margin-top: 0;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary .postcard-summary__title {
+    font-size: 7px;
+    line-height: 1.3;
+    margin-bottom: 11px;
+  }
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary .postcard-summary__content {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #5564ca;
+  word-break: break-word;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary .postcard-summary__content {
+    font-size: 5px;
+    line-height: 7px;
+  }
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-3 .form-item-postcard-summary {
+    margin-left: -30px;
+    margin-right: -30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.webform-submission-postcard-form .create-postcard--step-3 .submit-container.form-wrapper {
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -84px;
+  position: relative;
+  z-index: 2;
+  background-color: #F7F5EC;
+  padding: 65px 85px 72px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-3 .submit-container.form-wrapper {
+    margin-top: -10px;
+    padding: 35px 22px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-wrapper {
+  margin-top: 0;
+  margin-bottom: 41px;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-wrapper .form-item {
+  margin-top: 0;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-item label,
+.webform-submission-postcard-form .create-postcard--step-3 .form-item .help-block {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 1px;
+  color: #695647;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-item > input:not([type=checkbox]) {
+  padding-right: 0;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-item > input:not([type=checkbox]), .webform-submission-postcard-form .create-postcard--step-3 .form-item > select {
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+  border-width: 0 0 1px;
+  border-color: rgba(0, 0, 0, 0.5019607843);
+  font-size: 15px;
+  line-height: 20px;
+  color: #6F6A37;
+  padding-left: 0;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-item > input:not([type=checkbox])::placeholder, .webform-submission-postcard-form .create-postcard--step-3 .form-item > select::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-item > input:not([type=checkbox]).error, .webform-submission-postcard-form .create-postcard--step-3 .form-item > select.error {
+  border-color: #ff0000;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-actions.form-wrapper {
+  margin-bottom: 0;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .country-property-label {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 1px;
+  color: #695647;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .country-property-label + .form-group {
+  margin-top: 0;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-type-checkbox {
+  margin-bottom: 19px;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-type-checkbox input {
+  position: absolute;
+  left: 0;
+  margin: 0;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-type-checkbox input::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #cfcfcf;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  margin: 0;
+  background-color: #F7F5EC;
+  border-radius: 0;
+  transition: background-color 0.4s ease, background-image 0.4s ease;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-type-checkbox input:checked::before {
+  content: "";
+  border-color: #6F6A37;
+  background-color: #6F6A37;
+  background-image: url('data:image/svg+xml,<svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.69756 0.00128522C9.91488 -0.0108713 10.1294 0.0640393 10.2944 0.190862C10.7617 0.55063 11.2669 1.05628 10.8386 1.63585L4.12278 7.91849C3.91424 8.0371 3.6569 8.02527 3.46065 7.88925L0.214574 4.85241C0.00673572 4.63359 -0.0508412 4.33099 0.0450033 4.05336C0.107846 3.87101 0.582154 3.41104 0.758395 3.29473C1.1 3.06901 1.54165 3.11698 1.84463 3.37621L3.77522 5.18556L3.82507 5.20692L9.13654 0.240145C9.29312 0.10938 9.48376 0.0131132 9.69756 0.00128522Z" fill="white"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-type-checkbox label {
+  position: relative;
+  padding-left: 35px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #695647;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .form-type-checkbox label a {
+  text-decoration: underline;
+  color: #695647;
+}
+@media (hover: hover) {
+  .webform-submission-postcard-form .create-postcard--step-3 .form-type-checkbox label a:hover {
+    color: #695647;
+  }
+}
+.webform-submission-postcard-form .create-postcard--step-3 .captcha .captcha__element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .select2.select2-container--disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .select2 .select2-selection {
+  height: auto;
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.5019607843);
+  border-width: 0 0 1px;
+  border-radius: 0;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .select2 .select2-selection__placeholder {
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.webform-submission-postcard-form .create-postcard--step-3 .select2 .select2-selection__rendered {
+  font-size: 15px;
+  line-height: 20px;
+  color: #6F6A37;
+  padding: 13px 30px 13px 0;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .select2 .select2-selection__arrow {
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  margin-top: -5px;
+  right: 14px;
+  background-image: url('data:image/svg+xml,<svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0291 8.62501L13.1288 5.26479C14.575 3.69814 16.0217 2.1319 17.4689 0.566074C17.922 0.077089 18.5188 -0.0594297 19.1176 0.166446C19.6964 0.384256 20.0673 0.894959 19.9898 1.48881C19.9526 1.77309 19.8309 2.04212 19.6382 2.26573C16.8184 5.34733 13.9891 8.42044 11.1505 11.4851C10.5082 12.1788 9.53516 12.1677 8.89357 11.4751C6.04517 8.38859 3.19943 5.30017 0.356375 2.20988C-0.170934 1.63526 -0.104102 0.796914 0.497392 0.326546C1.12963 -0.169886 1.98642 -0.0935595 2.54314 0.509604C4.92104 3.08691 7.29828 5.66483 9.67484 8.24338C9.7791 8.36252 9.88938 8.47608 10.0291 8.62501Z" fill="%23626161"/></svg>');
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .select2 .select2-selection__arrow b {
+  display: none;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .select2 .select2-selection__clear {
+  display: none;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .select2.select2-container--below.select2-container--open .selection .select2-selection__arrow {
+  transform: rotate(180deg);
+}
+.webform-submission-postcard-form .create-postcard--step-3 .select2.error .select2-selection {
+  border-color: #ff0000;
+}
+.webform-submission-postcard-form .create-postcard--step-3 .select2.error .select2-selection__arrow {
+  background-image: url('data:image/svg+xml,<svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0291 8.62501L13.1288 5.26479C14.575 3.69814 16.0217 2.1319 17.4689 0.566074C17.922 0.077089 18.5188 -0.0594297 19.1176 0.166446C19.6964 0.384256 20.0673 0.894959 19.9898 1.48881C19.9526 1.77309 19.8309 2.04212 19.6382 2.26573C16.8184 5.34733 13.9891 8.42044 11.1505 11.4851C10.5082 12.1788 9.53516 12.1677 8.89357 11.4751C6.04517 8.38859 3.19943 5.30017 0.356375 2.20988C-0.170934 1.63526 -0.104102 0.796914 0.497392 0.326546C1.12963 -0.169886 1.98642 -0.0935595 2.54314 0.509604C4.92104 3.08691 7.29828 5.66483 9.67484 8.24338C9.7791 8.36252 9.88938 8.47608 10.0291 8.62501Z" fill="%23ff0000"/></svg>');
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .create-postcard--step-3 .form-wrapper {
+    margin-bottom: 27px;
+  }
+  .webform-submission-postcard-form .create-postcard--step-3 .webform-flex--container > .form-item {
+    margin-bottom: 27px;
+  }
+  .webform-submission-postcard-form .create-postcard--step-3 .webform-flex--container > .form-item.form-item-country {
+    margin-bottom: 7px;
+  }
+  .webform-submission-postcard-form .create-postcard--step-3 .captcha {
+    padding-top: 10px;
+  }
+}
+.webform-submission-postcard-form .form-actions.form-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0 61px;
+  margin-top: 45px;
+  justify-content: center;
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .webform-submission-postcard-form .form-actions.form-wrapper {
+    gap: 0 19px;
+    margin-top: 53px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+.webform-submission-postcard-form .form-actions.form-wrapper .btn,
+.webform-submission-postcard-form .form-actions.form-wrapper .btn-group {
+  margin-right: 0;
+}
+
+body:has(.webform-submission-postcard-form) .main-container {
+  contain: unset;
+}
+body:has(.webform-submission-postcard-form) .select2-dropdown {
+  background-color: #F7F5EC;
+}
+body:has(.webform-submission-postcard-form) .select2-dropdown.select2-dropdown--blow, body:has(.webform-submission-postcard-form) .select2-dropdown.select2-dropdown--above {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+body:has(.webform-submission-postcard-form) .select2-dropdown .select2-search__field {
+  outline: none;
+  background-color: transparent;
+}
+body:has(.webform-submission-postcard-form) .select2-dropdown .select2-results > .select2-results__options::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: transparent;
+}
+body:has(.webform-submission-postcard-form) .select2-dropdown .select2-results > .select2-results__options::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+body:has(.webform-submission-postcard-form) .select2-dropdown .select2-results > .select2-results__options::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+}
+body:has(.webform-submission-postcard-form) .select2-dropdown .select2-results__option[aria-selected=true], body:has(.webform-submission-postcard-form) .select2-dropdown .select2-results__option--highlighted[aria-selected] {
+  background-color: #695647;
+  color: #F7F5EC;
+}
+
+/*# sourceMappingURL=postcard_form.css.map */

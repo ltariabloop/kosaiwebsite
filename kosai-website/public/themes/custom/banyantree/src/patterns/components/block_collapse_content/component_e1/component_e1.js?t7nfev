@@ -1,0 +1,32 @@
+jQuery(document).ready(function() {
+    jQuery(".wrapper-component-e-a .field--name-field-content-collapse > .field--item > .paragraph > .field--name-field-title").on("click", function() {
+        if (jQuery(this).hasClass("active")) {
+        jQuery(this).removeClass("active");
+        jQuery(this)
+            .siblings(".wrapper-component-e-a .wrapper-article-content")
+            .slideUp(300);
+        } else {
+        jQuery(".wrapper-component-e-a .field--name-field-content-collapse > .field--item > .paragraph > .field--name-field-title").removeClass("active");
+        jQuery(this).addClass("active");
+        jQuery(".wrapper-component-e-a .wrapper-article-content").slideUp(300);
+        jQuery(this)
+            .siblings(".wrapper-component-e-a .wrapper-article-content")
+            .slideDown(300);
+        }
+    });
+});
+
+(function ($) {
+    // Shorten text
+    $(function() {
+        $('.wrapper-component-e-a .wrapper-collapse .field--name-field-summary').each(function() {
+            const currentText = $(this).text();
+            const truncatedText = truncate(currentText.trim(), 25);
+            $(this).text(truncatedText)
+          })
+
+          function truncate(str, no_words) {
+            return str.split(" ").splice(0, no_words).join(" ");
+          }
+    })
+  })(jQuery);

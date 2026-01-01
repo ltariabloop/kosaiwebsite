@@ -1,0 +1,130 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
+ */
+@import url("https://use.typekit.net/kxs7kia.css");
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+.block-block-content .basic-wrapper {
+  padding: 50px 24px 107px;
+}
+@media (max-width: 767px) {
+  .block-block-content .basic-wrapper {
+    padding: 43px 0 87px;
+  }
+}
+.block-block-content .block-small-title {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.3;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+.block-block-content .basic-content {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 851px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.block-block-content .basic-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+.block-block-content .basic-content ul li {
+  position: relative;
+  padding-left: 23px;
+}
+.block-block-content .basic-content ul li::before {
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #695647;
+}
+.block-block-content .basic-content a {
+  display: inline-block;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+@media (max-width: 1024px) {
+  .block-block-content .basic-content a {
+    font-size: 16px;
+  }
+}
+.block-block-content .basic-content a:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #695647;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.block-block-content .basic-content a:after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 1px;
+  background-color: #F7F5EC;
+  position: absolute;
+  left: -10px;
+  bottom: 0;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+.block-block-content .basic-content a:hover {
+  color: #6F6A37;
+}
+.block-block-content .basic-content a:hover:after {
+  left: calc(100% + 10px);
+}
+
+/*# sourceMappingURL=basic_small_title.css.map */

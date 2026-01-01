@@ -1,0 +1,40 @@
+(function ($) {
+$(document).ready(function(e) {
+  $('input').focus(function () {
+    addFocused(this);
+  })
+
+  .on('focusout', function () {
+    if (!this.value) {
+      $(this).parents('.form-item').removeClass('focused');
+    }
+  })
+
+  .each(function(index, item) {
+    if (this.value) {
+      addFocused(this);
+    }
+  });
+
+  $('#edit-btw-check-in-date').on('change', function () {
+    var value = $(this).val();
+    var selectedDate = new Date(value);
+    selectedDate.setDate(selectedDate.getDate() + 1);
+    $('#edit-btw-check-out-date').datepicker('option', 'minDate', selectedDate);
+  })
+  .trigger('change');
+
+  $('#edit-cpw-check-in-date').on('change', function () {
+    var value = $(this).val();
+    var selectedDate = new Date(value);
+    selectedDate.setDate(selectedDate.getDate() + 1);
+    $('#edit-cpw-check-out-date').datepicker('option', 'minDate', selectedDate);
+  })
+  .trigger('change');
+});
+
+  function addFocused(input) {
+    $(input).parents('.form-item').addClass('focused');
+  }
+
+})(jQuery);

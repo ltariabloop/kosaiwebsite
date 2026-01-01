@@ -1,0 +1,70 @@
+(function ($, Drupal) {
+
+   // limit title,content
+   // let str_k_title = $('.wrapper-component-k .wrapper-title')
+   // str_k_title.text().length > 70 ? str_k_title.html(str_k_title.text().substring(0,70)+ '...') : ''
+  // var label = document.createElement('button');
+  // label.className = 'divdiv';
+  // document.querySelector('#ui-id-2').appendChild(label)
+  // label.appendChild(x)
+  // Shorten text
+  // $('.wrapper-component-k .wrapper-title').each(function () {
+  //   const currentText = $(this).text();
+  //   const truncatedText = truncate(currentText.trim(), 8);
+  //   $(this).text(truncatedText);
+  // });
+
+  // $('.wrapper-component-k .wrapper-content p').each(function () {
+  //   const currentText = $(this).text();
+  //   const truncatedText = truncate(currentText.trim(), 50);
+  //   $(this).text(truncatedText);
+  // });
+  $(document).on("click",".component-k-popup .show-more-detail",function() {
+    let $nid = $(this).data( "id");
+    Drupal.ajax({
+      url: "/showmore/",
+      submit: {nid: $nid},
+  }).execute().done( function (e) {
+    $('body').addClass('has-overlay-component-k');
+    if ($('#component-k-popup').length > 0) {
+      $('#component-k-popup').parent().attr('id', 'wrapper-popup');
+    }
+  });
+});
+
+$(document).on("click",".ui-dialog-titlebar-close",function() {
+  $('body').removeClass('has-overlay-component-k');
+});
+
+$(document).on("click",".ui-dialog-title",function() {
+  var x = document.querySelector('#component-k-popup');
+  x.remove();
+  var fieldset = document.createElement('div');
+  fieldset.className = 'divdiv';
+  fieldset.appendChild(x)
+
+  document.querySelector('.ui-dialog').appendChild(fieldset)
+});
+  function truncate(str, no_words) {
+    return str.split(" ").splice(0, no_words).join(" ");
+  }
+
+  $(function () {
+    let elements = $('.wrapper-component-k .has-opacity');
+    if (elements.length > 0) {
+      for (const element of elements) {
+        let articleImages = $(element).find('.slick__slide article .wrapper-image-item');
+        if (articleImages.length > 0) {
+          for (const articleImage of articleImages) {
+            let opacity = $(element).data('opacity') || 0;
+            opacity = opacity / 100;
+            $(articleImage).find('.field--name-field-image').css("--custom-opacity-height",  "430px");
+            $(articleImage).find('.field--name-field-image').css("--custom-opacity-height-mobile",  "354px");
+            $(articleImage).find('.field--name-field-image').css("--custom-opacity-number",  opacity);
+            $(articleImage).find('.wrapper-content').css('z-index', 99);
+          }
+        }
+      }
+    }
+  });
+})(jQuery, Drupal);

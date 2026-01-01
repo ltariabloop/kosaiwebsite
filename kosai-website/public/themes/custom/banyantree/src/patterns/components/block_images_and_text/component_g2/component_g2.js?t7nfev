@@ -1,0 +1,54 @@
+(function ($) {
+  // Shorten text
+  $('.wrapper-component-g-b .wrapper-title').each(function () {
+    const currentText = $(this).text();
+    const truncatedText = truncate(currentText.trim(), 12);
+    $(this).text(truncatedText);
+  });
+
+  $('.wrapper-component-g-b .wrapper-description p').each(function () {
+    const currentText = $(this).text();
+    const truncatedText = truncate(currentText.trim(), 50);
+    $(this).text(truncatedText);
+  });
+
+  function truncate(str, no_words) {
+    return str.split(" ").splice(0, no_words).join(" ");
+  }
+
+  $(function () {
+    var componentClass = '.wrapper-component-g-b';
+    var $playButton = $(`${componentClass} .wrapper-link`);
+
+    // Fix bug autoplay for iOS
+    let videoElements = $(`${componentClass} video[autoplay="autoplay"]`);
+    videoElements.attr('playsinline', '');
+
+    $playButton.on('click', function () {
+      $(this).parent().parent().find('.field--name-field-bg-video').addClass('fading');
+      $(this).parent().addClass('fading');
+      $(this).parent().parent().find('.field--name-field-video video').addClass('show');
+      $(this).parent().parent().find('.field--name-field-video video').trigger('play');
+    });
+
+    let originalElements = $(`${componentClass} .wrapper-image .field--name-field-bg-video`);
+    if (originalElements.length > 0) {
+      for (const element of originalElements) {
+        $(element).css('--custom-opacity', 0);
+      }
+    }
+
+    let elements = $(`${componentClass} .has-opacity`);
+    if (elements.length > 0) {
+      for (const element of elements) {
+        let image = $(element).find('.wrapper-image .field--name-field-bg-video');
+        if (image.length > 0) {
+          $(image).css('--custom-opacity', 0);
+          let opacity = $(element).data('opacity') || 0;
+          opacity = opacity / 100;
+          $(image).css('--custom-opacity', opacity);
+        }
+      }
+    }
+  });
+})(jQuery);

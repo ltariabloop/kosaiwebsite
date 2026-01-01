@@ -1,0 +1,171 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
+ */
+@import url("https://use.typekit.net/kxs7kia.css");
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+.wrapper-component-v-a {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 15px;
+  padding: 0 !important;
+  text-align: left;
+  margin-bottom: 80px;
+}
+@media (max-width: 768px) {
+  .wrapper-component-v-a {
+    padding: 0 5px;
+  }
+}
+@media (max-width: 1024px) {
+  .wrapper-component-v-a {
+    margin-bottom: 50px;
+  }
+}
+.wrapper-component-v-a .row {
+  margin: 0;
+}
+.wrapper-component-v-a .col-md-6 {
+  padding: 0;
+}
+.wrapper-component-v-a .col-md-6:first-child {
+  padding-left: 140px;
+  padding-right: 50px;
+}
+@media (max-width: 1920px) {
+  .wrapper-component-v-a .col-md-6:first-child {
+    padding-left: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .wrapper-component-v-a .col-md-6:first-child {
+    padding-right: 30px;
+  }
+}
+.wrapper-component-v-a .wrapper-title {
+  max-width: 540px;
+}
+@media (max-width: 1024px) {
+  .wrapper-component-v-a .wrapper-title {
+    margin-bottom: 40px;
+  }
+}
+.wrapper-component-v-a .wrapper-title h2 {
+  font-family: "Avenir", Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.143;
+  color: #000;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  margin: 0;
+}
+@media only screen and (max-width: 1024px) {
+  .wrapper-component-v-a .wrapper-title h2 {
+    font-size: 45px;
+    line-height: 1;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrapper-component-v-a .wrapper-title h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.wrapper-component-v-a .wrapper-content {
+  max-width: 540px;
+  color: #898D8D;
+}
+@media (min-width: 1024px) {
+  .wrapper-component-v-a .wrapper-content {
+    padding-top: 10px;
+  }
+}
+.wrapper-component-v-a .wrapper-link a {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #121113;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #121113;
+  text-decoration: none !important;
+  margin-top: 40px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+@media (max-width: 1024px) {
+  .wrapper-component-v-a .wrapper-link a {
+    font-size: 16px;
+    margin-top: 40px;
+  }
+}
+.wrapper-component-v-a .wrapper-link a::before {
+  content: "";
+  width: 20px;
+  height: 4px;
+  background: #FBF8EE;
+  position: absolute;
+  right: 100%;
+  bottom: -2px;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.wrapper-component-v-a .wrapper-link a:hover::before {
+  right: -20px;
+}
+.wrapper-component-v-a .wrapper-link a:focus, .wrapper-component-v-a .wrapper-link a:active {
+  border-color: #898D8D;
+  color: #898D8D;
+}
+@media (max-width: 767px) {
+  .wrapper-component-v-a .wrapper-link a {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=component_v1.css.map */

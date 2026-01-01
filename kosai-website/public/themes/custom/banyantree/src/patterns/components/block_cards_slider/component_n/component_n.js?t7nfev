@@ -1,0 +1,48 @@
+(function ($) {
+  
+  // limit title,content
+  // let str_n_title = $('.wrapper-component-n .wrapper-title')
+  // str_n_title.text().length > 40 ? str_n_title.html(str_n_title.text().substring(0,40)+ '...') : ''
+  // Shorten text
+  $('.wrapper-component-n .wrapper-title').each(function() {
+    const currentText = $(this).text();
+    const truncatedText = truncate(currentText.trim(), 5);
+    $(this).text(truncatedText)
+  })
+
+  $('.wrapper-component-n .slick .wrapper-title').each(function() {
+    const currentText = $(this).text();
+    const truncatedText = truncate(currentText.trim(), 8);
+    $(this).text(truncatedText)
+  })
+
+  $('.wrapper-component-n .wrapper-content p').each(function() {
+    const currentText = $(this).text();
+    const truncatedText = truncate(currentText.trim(), 60);
+    $(this).text(truncatedText)
+  })
+
+  function truncate(str, no_words) {
+    return str.split(" ").splice(0, no_words).join(" ");
+  }
+
+  $(function() {
+    const componentClass = '.wrapper-component-n'
+    $(componentClass).each(function(){
+      // Showing progrsss when slick is loaded
+      const totalSlick = $(this).find(`.slick-dots li`).length;
+      if (totalSlick > 0) {
+        $(`<p class="slick-progress"><span class="big">1/</span><span class="small">${totalSlick}</span></p>`).insertAfter($(this).find('.slick-prev'));
+      }
+  
+      // Updating progress 
+      $(this).find(`.slick__slider`).on('afterChange', (event, slick, currentSlide) => {
+        console.log(currentSlide)
+        // const currentSlick = $(this).find(`.slick-dots .slick-active button`).html()
+        const currentSlick = currentSlide + 1
+        $(this).find(`.slick-progress`).html(`<span class="big">${currentSlick}/</span><span class="small">${totalSlick}</span></p>`)
+      })
+    });
+  });
+  
+})(jQuery);

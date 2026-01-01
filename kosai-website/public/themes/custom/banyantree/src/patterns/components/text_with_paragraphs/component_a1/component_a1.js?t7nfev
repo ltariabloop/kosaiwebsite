@@ -1,0 +1,117 @@
+(function ($) {
+  "use strict";
+  Drupal.behaviors.component_a1 = {
+    attach: function () {
+    },
+  };
+  // let params = {
+  //   '.row .ca1 .wrapper-title h2' : 42,
+  //   '.row .ca1 .wrapper-content p' : 220,
+  //   '.row .ca2 .wrapper-title h2' : 42,
+  //   '.row .ca2 .wrapper-content p' : 220,
+  //   '.wrapper-component-b .title' : 30,
+  //   '.wrapper-component-b .wrapper-content p' : 220,
+  //   '.wrapper-component-c .title' : 25,
+  //   '.wrapper-component-c .wrapper-content p' : 210,
+  //   '.wrapper-component-d-a .wrapper-title' : 40,
+  //   '.wrapper-component-d-a .wrapper-description .field--type-text-with-summary' : 220,
+  //   '.wrapper-component-d-b .wrapper-title' : 40,
+  //   '.wrapper-component-d-b .wrapper-description .field--type-text-with-summary' : 220,
+  //   // '.wrapper-component-f .wrapper-description .field--type-text-with-summary' : 300,
+  //   // '.wrapper-component-h-a .wrapper-title' : 40,
+  //   // '.wrapper-component-h-a .wrapper-content > div' : 550,
+  //   // '.wrapper-component-h-b .wrapper-title' : 40,
+  //   // '.wrapper-component-h-b .wrapper-content > div' : 550,
+  //   // '.wrapper-component-h-c .wrapper-title' : 40,
+  //   // '.wrapper-component-h-c .wrapper-content > div' : 300,
+  //   '.wrapper-component-k .wrapper-title' : 50,
+  //   '.wrapper-component-m .wrapper-title-name' : 35,
+  //   '.wrapper-component-m .col-left .title' : 55,
+  //   '.wrapper-component-m .col-right .content p' : 130,
+  //   '.wrapper-component-n .wrapper-title' : 40,
+  // }
+  // $.each(params, function(classes, limit) {
+  //   let str = $(classes).text().substring(0,limit)+ '...'
+	// 	$(classes).text().length > limit ? $(classes).html(str) : '';
+	// })
+
+  
+  // Shorten text
+  // $('.row .ca1 .wrapper-title h2').each(function() {
+  //   var $this = $(this);
+  //   var currentText = $this.text().trim();
+
+  //   if (currentText.length > 60) {
+  //     $this.text(currentText.substring(0, 60) + '...');
+  //   }
+  // });
+
+  // $('.row .ca1 .wrapper-title h2').each(function() {
+  //   const currentText = $(this).text();
+  //   const truncatedText = truncate(currentText.trim(), 25);
+  //   $(this).text(truncatedText)
+  // })
+
+  // var $obj = $();
+
+  // $('.row .ca1 .wrapper-content p').each(function() {
+  //   var $this = $(this);
+  //   var $p = $this.find('p');
+
+  //   $obj = $obj.add($p.length? $p: $this);
+  // });
+
+  // $obj.each(function() {
+  //   const currentText = $(this).text();
+  //   var truncatedText = truncate(currentText.trim(), 150);
+
+  //   if (truncatedText.length > 220) {
+  //     truncatedText = truncatedText.substring(0, 500) + '...';
+  //   }
+
+  //   $(this).text(truncatedText)
+  // })
+
+
+
+  $('.row .ca1 .wrapper-title h2').each(function () {
+      const currentText = $(this).text();
+      const truncatedText = truncate(currentText.trim(), 8);
+      $(this).text(truncatedText);
+    }
+  )
+  $('.row .ca1 .wrapper-content p').each(function () {
+    const currentText = $(this).text();
+    const truncatedText = truncate(currentText.trim(), 50);
+    $(this).text(truncatedText);
+  })
+  function truncate(str, no_words) {
+    return str.split(" ").splice(0, no_words).join(" ");
+  }
+
+  $(function () {
+    let elements = $('.ca1-wrapper .has-opacity');
+    if (elements.length > 0) {
+      for (const element of elements) {
+        let slides = $(element).find('.slick__slide .paragraph--type--image-and-text');
+        if (slides.length > 0) {
+          for (const slide of slides) {
+            let opacity = $(element).data('opacity') || 0;
+            opacity = opacity / 100;
+            $(slide).append('<div class="custom-opacity" style="--custom-opacity-height: 148px; --custom-opacity-height-mobile: 84px; z-index: 1; --custom-opacity-number: ' + opacity + ';"></div>');
+            $(slide).find('.field--name-field-title').css('z-index', 99);
+          }
+        }
+      }
+    }
+  });
+
+  // let params = {
+	// 	'h2': 'h2'
+	// };
+  // $.each(params, function(parent, item) {
+  //   let str = $(item).text()
+  //   if(str.length > 30) str = str.subtring(0,30)
+  //   console.log("h2")
+	// })
+})(jQuery);

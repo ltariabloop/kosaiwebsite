@@ -1,0 +1,118 @@
+(function ($, Drupal, once) {
+  "use strict";
+  //Menu sticky
+  $header = $('header');
+  var num = 0; // number of pixels before modifying styles
+  var isSticky = false;
+  var $header;
+
+  Drupal.behaviors.customMainMenu = {
+    attach: function () {
+      $(once('customMainMenu', 'html')).each(function() {
+        // remove Bootstrap toggle feature from the menus
+        $('#block-system-menu-block-main, #block-system-menu-block-footer').find('ul.menu--main').find('a.dropdown-toggle').each(function () {
+          this.removeAttribute('data-toggle');
+        });
+
+        // handle mouseover
+        $('#block-system-menu-block-main').find('ul.menu--main').find('li.dropdown').hover(function() {
+          $(this).children('ul').stop(true, true).delay(100).slideDown();
+
+        }, function() {
+          $(this).children('ul').stop(true, true).delay(50).slideUp();
+        })
+        // handle touch device
+        .on('touchend', function(e) {
+          var $this = $(this);
+          var $eventTarget = $(e.target);
+          var $dropdown = $this.children('ul');
+
+          var preventDefault = false;
+
+          if ($eventTarget.hasClass('dropdown-toggle')) { // a.dropdown-toggle
+            // allow <a> behavior if current menu is already expanded
+            preventDefault = !$dropdown.hasClass('expanded');
+          }
+          else if ($eventTarget.hasClass('dropdown')) {
+            preventDefault = true;
+          }
+
+          if (preventDefault) {
+            e.preventDefault();
+
+            // close expanded menus if any
+            $this.siblings().children('ul.expanded').stop(true, true).delay(50).slideUp().removeClass('expanded');
+
+            // expand current menu
+            $this.children('ul').delay(50).slideToggle().toggleClass('expanded');
+          }
+        });
+      });
+
+      $(function() {
+        $('#navButton').click(function() {
+            if ($('#navButton').hasClass("collapsed")) {
+                $('#navbar').addClass("active");
+                return;
+            }
+            $('#navbar').removeClass("active");
+        });
+      });
+      $(function() {
+        let navItems = $("#sub-nav-sticky ul li");
+        $("#sub-nav-sticky ul li").click(function(e) {
+          // e.preventDefault();
+          let idx = $(this).index();
+          navItems[idx].classList.add('active');
+         })
+      });
+    }
+  };
+
+  $(document).ready(function() {
+    // onclick Footer Cookie Preferences Link trigger CookieYes Popup
+    $(document).on('click', 'a.cookie-preferences', function(e) {
+      e.preventDefault();
+
+      $('button.cky-btn-revisit').click();
+    });
+
+    if (!$('body').hasClass('user-logged-in')) {
+      onWindowScroll();
+      $(window).scroll(onWindowScroll);
+    }
+
+    $('.nav-hamburger-menu').click(function() {
+      $('body').toggleClass('menu-show');
+    });
+
+    $(function(){
+      var lastScrollTop = 0, delta = 5;
+      $(window).scroll(function(){
+        var nowScrollTop = $(this).scrollTop();
+        if (!$('body').hasClass('menu-show') && Math.abs(lastScrollTop - nowScrollTop) >= delta) {
+          if (nowScrollTop > lastScrollTop){
+              $header.addClass('un-sticky');
+          } else {
+            $header.removeClass('un-sticky');
+         }
+        lastScrollTop = nowScrollTop;
+        }
+      });
+    });
+  });
+
+  function onWindowScroll() {
+    if (window.scrollY > num) {
+      if (!isSticky) {
+        isSticky = true;
+        $header.addClass('sticky');
+      }
+    }
+    else if (isSticky) {
+      $header.removeClass('sticky');
+      isSticky = false;
+    }
+  }
+
+})(jQuery, Drupal, once);

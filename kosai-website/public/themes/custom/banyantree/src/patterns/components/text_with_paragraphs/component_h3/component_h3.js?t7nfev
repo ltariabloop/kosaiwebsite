@@ -1,0 +1,76 @@
+(function ($) {
+  "use strict";
+  Drupal.behaviors.component_h3 = {
+    attach: function () {
+    },
+  };
+
+  // Shorten text
+  $('.wrapper-component-h-c .wrapper-title').each(function () {
+    const currentText = $(this).text();
+    const truncatedText = truncate(currentText.trim(), 8);
+    $(this).text(truncatedText);
+  });
+
+  $('.wrapper-component-h-c .wrapper-content p').each(function () {
+    const currentText = $(this).text();
+    const truncatedText = truncate(currentText.trim(), 50);
+    $(this).text(truncatedText);
+  });
+
+  function truncate(str, no_words) {
+    return str.split(" ").splice(0, no_words).join(" ");
+  }
+
+  $(function () {
+    var componentClass = '.wrapper-component-h-c';
+    var $playButton = $(`${componentClass} .wrapper-play-video`);
+
+    // Fix bug autoplay for iOS
+    let videoElements = $(`${componentClass} video[autoplay="autoplay"]`);
+    videoElements.attr('playsinline', '');
+
+    $playButton.on('click', function () {
+      $(this).parent().addClass('fading');
+      $(this).parent().parent().find('.desktop-image').addClass('fading');
+      $(this).parent().parent().find('.field--name-field-video').addClass('show');
+      $(this).parent().parent().find('.field--name-field-video video').addClass('show');
+      $(this).parent().parent().find('.field--name-field-video video').trigger('play');
+    });
+
+    let elements = $('.wrapper-component-h-c.has-opacity');
+    if (elements.length > 0) {
+      for (const element of elements) {
+        let slides = [];
+        let imageSlides = $(element).find('.slick__slide .paragraph--type--image-and-text .wrapper-images-sliders');
+        let videoSlides = $(element).find('.slick__slide .paragraph--type--image-and-text .wrapper-video');
+
+        if (imageSlides.length > 0) {
+          Array.prototype.push.apply(slides, imageSlides);
+        }
+
+        if (videoSlides.length > 0) {
+          Array.prototype.push.apply(slides, videoSlides);
+        }
+
+        if (slides.length > 0) {
+          for (const slide of slides) {
+            let opacity = $(element).data('opacity') || 0;
+            opacity = opacity / 100;
+            $(slide).append('<div class="custom-opacity" style="--custom-opacity-height: 100%; --custom-opacity-height-mobile: 100%; z-index: 1; --custom-opacity-number: ' + opacity + ';"></div>');
+            $(slide).find('.wrapper-content-slide').css('z-index', 99);
+          }
+        }
+      }
+    }
+  });
+  // adjust text and background color
+  if($(".wrapper-component-h-c .wrapper-content-slide .wrapper-link").length) {
+    let bg_link = $(".wrapper-component-h-c .wrapper-content-slide .wrapper-link");
+    $(bg_link).each(function() {
+      let bg_color = $(this).attr("style")
+      $(this).find("a").attr("style",bg_color)
+    })
+    
+  }
+})(jQuery);

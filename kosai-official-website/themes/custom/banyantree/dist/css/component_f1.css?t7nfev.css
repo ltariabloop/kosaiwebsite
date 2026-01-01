@@ -1,0 +1,269 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
+ */
+@import url("https://use.typekit.net/kxs7kia.css");
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Roman-12.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../fonts/Avenir-Medium-09.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@keyframes animate_title_f1 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animate_title_hover_f1 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animate_decs_f1 {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  50% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
+}
+.block-inline-blockblock-two-full-bleed-images + .block-inline-blockblock-two-full-bleed-images .wrapper-component-f {
+  margin-top: -80px;
+}
+@media (max-width: 1024px) {
+  .block-inline-blockblock-two-full-bleed-images + .block-inline-blockblock-two-full-bleed-images .wrapper-component-f {
+    margin-top: -50px;
+  }
+}
+
+.wrapper-component-f-a {
+  margin-bottom: 80px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+@media (max-width: 1024px) {
+  .wrapper-component-f-a {
+    margin-bottom: 50px;
+  }
+}
+.wrapper-component-f-a .wrapper-full-content {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.wrapper-component-f-a .row {
+  margin: 0;
+}
+.wrapper-component-f-a .col-md-6 {
+  padding: 0;
+}
+.wrapper-component-f-a .wrapper-image {
+  position: relative;
+  overflow: hidden;
+}
+.wrapper-component-f-a .wrapper-image img {
+  width: 100%;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+}
+.wrapper-component-f-a .wrapper-image .wrapper-title {
+  bottom: 100%;
+  animation: animate_title_f1 0.6s;
+}
+.wrapper-component-f-a .wrapper-image .wrapper-description {
+  font-size: 18px;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+@media (max-width: 767px) {
+  .wrapper-component-f-a .wrapper-image .wrapper-description {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.wrapper-component-f-a .wrapper-image:hover img {
+  transform: scale(1.06);
+}
+.wrapper-component-f-a .wrapper-image:hover .wrapper-title {
+  animation: animate_title_hover_f1 0.6s;
+}
+.wrapper-component-f-a .wrapper-image:hover .wrapper-description {
+  height: 100%;
+  opacity: 1;
+  visibility: inherit;
+  animation: animate_decs_f1 0.6s;
+}
+.wrapper-component-f-a .wrapper-image:hover .wrapper-link {
+  animation: animate_title_hover_f1 0.6s;
+}
+.wrapper-component-f-a .wrapper-content {
+  margin-left: 60px;
+  margin-bottom: 60px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 85%;
+  max-width: 410px;
+  z-index: 2;
+}
+@media (max-width: 1024px) {
+  .wrapper-component-f-a .wrapper-content {
+    margin-left: 35px;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1600px) {
+  .wrapper-component-f-a .wrapper-content {
+    margin-left: 140px;
+    margin-bottom: 120px;
+  }
+}
+.wrapper-component-f-a .wrapper-content a {
+  color: #fff;
+  text-decoration: none;
+}
+.wrapper-component-f-a .wrapper-title {
+  font-family: "Avenir", Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.143;
+  color: #6F6A37;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  color: #fff;
+  position: absolute;
+  bottom: 30px;
+}
+@media only screen and (max-width: 1024px) {
+  .wrapper-component-f-a .wrapper-title {
+    font-size: 45px;
+    line-height: 1;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrapper-component-f-a .wrapper-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 1366px) {
+  .wrapper-component-f-a .wrapper-title {
+    font-size: 50px;
+  }
+}
+@media (max-width: 1080px) {
+  .wrapper-component-f-a .wrapper-title {
+    transform: none !important;
+    font-size: 40px;
+    line-height: 1;
+    position: static;
+  }
+}
+@media (max-width: 767px) {
+  .wrapper-component-f-a .wrapper-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.wrapper-component-f-a .wrapper-description {
+  font-size: 18px;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+@media (max-width: 1080px) {
+  .wrapper-component-f-a .wrapper-description {
+    font-size: 16px;
+    height: auto;
+    margin-top: 15px !important;
+    opacity: 1 !important;
+  }
+}
+.wrapper-component-f-a .wrapper-description p {
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.wrapper-component-f-a .wrapper-link {
+  margin-top: 20px;
+  animation: animate_title_f1 0.6s;
+}
+.wrapper-component-f-a .wrapper-link a {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32.354' height='12.707' viewBox='0 0 32.354 12.707'%3E%3Cg id='Group_103' data-name='Group 103' transform='translate(-324.5 -377.146)'%3E%3Cline id='Line_29' data-name='Line 29' x2='32' transform='translate(324.5 383.5)' fill='none' stroke='%23000' stroke-width='1'/%3E%3Cline id='Line_30' data-name='Line 30' y1='6' x2='6' transform='translate(350.5 383.5)' fill='none' stroke='%23000' stroke-width='1'/%3E%3Cline id='Line_31' data-name='Line 31' x1='6' y1='6' transform='translate(350.5 377.5)' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 32px;
+  display: block;
+  filter: invert(1);
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=component_f1.css.map */

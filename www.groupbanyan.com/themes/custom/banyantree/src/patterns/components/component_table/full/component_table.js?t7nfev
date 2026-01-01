@@ -1,0 +1,11 @@
+(function ($)
+ {
+  "use strict";
+  Drupal.behaviors.component_table = {
+    attach: function () {
+      $(function () {
+        $('.component-table .table-content table').addClass('table table-hover table-striped table-responsive');
+      });
+    },
+  };
+})(jQuery);
