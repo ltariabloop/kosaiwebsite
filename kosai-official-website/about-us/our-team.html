@@ -173,6 +173,72 @@
         border-color: #D1C7B3 !important;
         color: #695647 !important;
       }
+      /* Team Profiles Responsive Grid */
+      @media (max-width: 1024px) {
+        .team-profiles-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+          gap: 30px !important;
+        }
+      }
+      @media (max-width: 768px) {
+        .team-profiles-grid {
+          grid-template-columns: 1fr !important;
+          gap: 40px !important;
+        }
+        .team-profiles-section {
+          padding: 40px 20px !important;
+        }
+        .wrapper-title h2 {
+          font-size: 28px !important;
+        }
+        .profile-image {
+          max-width: 250px !important;
+          height: 250px !important;
+        }
+        .profile-name {
+          font-size: 20px !important;
+        }
+        .profile-experience {
+          font-size: 14px !important;
+        }
+      }
+      /* AOS custom-fade-in animation for team profiles */
+      .team-profiles-section [data-aos="custom-fade-in"] {
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+      }
+      .team-profiles-section [data-aos="custom-fade-in"].aos-animate {
+        opacity: 1;
+      }
+      @media (max-width: 1023px) {
+        .team-profiles-section [data-aos="custom-fade-in"] {
+          opacity: 1;
+        }
+      }
+      /* Partner image hover effect */
+      .partner-image-wrapper {
+        cursor: pointer;
+      }
+      .partner-image-wrapper .profile-image-default {
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+      }
+      .partner-image-wrapper .profile-image-hover {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+      .partner-image-wrapper:hover .profile-image-default {
+        opacity: 0 !important;
+      }
+      .partner-image-wrapper:hover .profile-image-hover {
+        opacity: 1 !important;
+      }
     </style>
         <a href="home.html#main-content" class="visually-hidden focusable skip-link">
       Skip to main content
@@ -201,7 +267,7 @@
         
 
           
-            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p><a href="../index.html"><img src="../themes/custom/banyantree/images/kosai-logo.png" alt="KOSAI Logo" style="height: 64px;" /></a></p>
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p><a href="../index.html"><img src="../images/photos/logos/kosailogo_white.png" alt="KOSAI Logo" style="height: 64px;" /></a></p>
 </div>
       
       </section>
@@ -251,7 +317,7 @@
           <a href="../about-us.html" data-drupal-link-system-path="node/about-us">About Us</a>
                       <a href="../about-us.html" class="link-without-arrow">
               <img class="menu-item-image img-responsive"
-                   src="../sites/btg/files/styles/hero_banner/public/2023-12/New%20About%20Us%20Banner%20Image_opacity_0.jpg.webp%3Fitok=xpJ4LMYN"
+                   src="../images/photos/aboutus_nav.jpg"
                    alt="About Us"/>
             </a>
                                       <ul class="menu-item menu-item--expanded menu menu-level-1">
@@ -264,37 +330,37 @@
   
                   </li>
                                         
-        <li class="menu-item menu-item--expanded">
+                <li class="menu-item menu-item--expanded">
           <a href="../asset-facility-management.html" data-drupal-link-system-path="node/asset-facility">Asset &amp; Facility Management</a>
                       <a href="../asset-facility-management.html" class="link-without-arrow">
               <img class="menu-item-image img-responsive"
-                   src="../sites/btg/files/2023-12/Hotels%20menu%20card.jpg"
+                   src="../images/photos/asset_nav.jpg"
                    alt="Asset &amp; Facility Management"/>
             </a>
                                       <ul class="menu-item menu-item--expanded menu menu-level-1">
                                         
         <li class="menu-item">
-          <a href="our-solutions/hotel-resort-management.html" class="link-has-arrow" data-drupal-link-system-path="node/hotel-resort">Hotel &amp; Resort Management</a>
+          <a href="asset-facility-management.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/hotel-resort">Hotel &amp; Resort Management</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/residential-lifestyle-management.html" class="link-has-arrow" data-drupal-link-system-path="node/residential-lifestyle">Residential &amp; Lifestyle Mgmt</a>
+          <a href="asset-facility-management.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/residential-lifestyle">Residential &amp; Lifestyle Management</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/cre-management.html" class="link-has-arrow" data-drupal-link-system-path="node/cre-management">CRE Management</a>
+          <a href="asset-facility-management.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/cre-management">CRE Management</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/spa-wellness-management.html" class="link-has-arrow" data-drupal-link-system-path="node/spa-wellness">Spa &amp; Wellness Management</a>
+          <a href="asset-facility-management.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/spa-wellness">Spa &amp; Wellness Management</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/sports-fitness-management.html" class="link-has-arrow" data-drupal-link-system-path="node/sports-fitness">Sports &amp; Fitness Management</a>
+          <a href="asset-facility-management.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/sports-fitness">Sports &amp; Fitness Management</a>
                                   
                   </li>
           </ul>
@@ -305,28 +371,28 @@
           <a href="../corporate-advisory-services.html" data-drupal-link-system-path="node/corporate-advisory">Corporate Advisory &amp; Services</a>
                       <a href="../corporate-advisory-services.html" class="link-without-arrow">
               <img class="menu-item-image img-responsive"
-                   src="../sites/btg/files/2023-12/Hotels%20menu%20card.jpg"
+                   src="../images/photos/corporate_nav.jpg"
                    alt="Corporate Advisory &amp; Services"/>
             </a>
                                       <ul class="menu-item menu-item--expanded menu menu-level-1">
                                         
         <li class="menu-item">
-          <a href="our-solutions/business-advisory-capital.html" class="link-has-arrow" data-drupal-link-system-path="node/business-advisory">Business Advisory &amp; Capital</a>
+          <a href="corporate-advisory-services.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/business-advisory">Business Advisory &amp; Capital</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/sales-marketing-strategy.html" class="link-has-arrow" data-drupal-link-system-path="node/sales-marketing">Sales &amp; Marketing Strategy</a>
+          <a href="corporate-advisory-services.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/sales-marketing">Sales &amp; Marketing Strategy</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/executive-recruitment.html" class="link-has-arrow" data-drupal-link-system-path="node/executive-recruitment">Executive Recruitment</a>
+          <a href="corporate-advisory-services.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/executive-recruitment">Executive Recruitment</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/architecture-construction.html" class="link-has-arrow" data-drupal-link-system-path="node/architecture-construction">Architecture &amp; Construction</a>
+          <a href="corporate-advisory-services.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/architecture-construction">Architecture &amp; Construction</a>
                                   
                   </li>
           </ul>
@@ -337,7 +403,7 @@
           <a href="past-projects/hotels-resorts.html" data-drupal-link-system-path="node/past-projects">Past Projects &amp; Experience</a>
                       <a href="past-projects/hotels-resorts.html" class="link-without-arrow">
               <img class="menu-item-image img-responsive"
-                   src="../sites/btg/files/styles/hero_banner/public/2023-12/New%20About%20Us%20Banner%20Image_opacity_0.jpg.webp%3Fitok=xpJ4LMYN"
+                   src="../images/photos/pastproject_nav.jpg"
                    alt="Past Projects &amp; Experience"/>
             </a>
                                       <ul class="menu-item menu-item--expanded menu menu-level-1">
@@ -369,7 +435,7 @@
           <a href="../contact.html" data-drupal-link-system-path="node/contact">Contact Us &amp; Careers</a>
                       <a href="../contact.html" class="link-without-arrow">
               <img class="menu-item-image img-responsive"
-                   src="../sites/btg/files/2022-08/mission.png"
+                   src="../images/contact_nav.jpg"
                    alt="Contact Us &amp; Careers"/>
             </a>
                                       <ul class="menu-item menu-item--expanded menu menu-level-1">
@@ -384,10 +450,10 @@
                                   
                   </li>
           </ul>
-  
+                                        
                   </li>
           </ul>
-                                  
+  
                   </li>
           </ul>
   </div>
@@ -458,7 +524,7 @@
        data-opacity-bottom="80">
           <div class="wrapper-image ">
         
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="../sites/btg/files/styles/hero_banner/public/2023-12/New%20About%20Us%20Banner%20Image_opacity_0.jpg.webp%3Fitok=xpJ4LMYN" width="1920" height="704" alt="OUR TEAM" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="../images/photos/aboutus_nav.jpg" width="1920" height="704" alt="OUR TEAM" class="img-responsive" />
 
 
 </div>
@@ -500,11 +566,11 @@
       
 <div class="wrapper-component-h-a" style="background-color: #F7F5EC">
   <div class="wrapper-title" style="color: #6F6A37">
-   Wellbeing That Performs
+   Built on Deep Experience
   </div>
   <div class="wrapper-content" style="color: #6F6A37">
     
-            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p>Insight first, then design, then the discipline of daily operation. We build clubs, spas, and hotels where the guest journey is certain and the P&L is steady—measurable uplift without the noise.</p></div>
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p>Decades of practice, refined strategy, and a relentless standard of care. We are a collective of former operators and industry architects who bridge the gap between ambitious vision and operational reality—ensuring your concept thrives in the Asian market.</p></div>
       
   </div>
   <div class="wrapper-link" style="color: #6F6A37">
@@ -521,6 +587,108 @@
   </div>
   <div class="layout layout--onecol">
     <div  class="layout__region layout__region--content">
+      
+  <section class="block block-block-content block-block-content-founders clearfix" id="founders">
+    <div class="team-profiles-section" style="background-color: #F7F5EC; padding: 60px 0;">
+      <div class="container">
+        <div class="wrapper-title" style="text-align: center; margin-bottom: 50px; color: #6F6A37;" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="800">
+          <h2 style="font-size: 36px; font-weight: 500; margin-bottom: 20px;">Founders</h2>
+        </div>
+        <div class="team-profiles-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1200px; margin: 0 auto;">
+          <!-- Founder 1 -->
+          <div class="team-profile-card" style="text-align: center;" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-delay="0">
+            <div class="profile-image-wrapper partner-image-wrapper" style="margin-bottom: 20px; position: relative; width: 100%; max-width: 300px; height: 300px; margin: 0 auto; overflow: hidden;">
+              <img src="https://sociology.columbia.edu/themes/custom/columbia/assets/img/people-default.svg" alt="Founder 1" class="profile-image profile-image-default" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block; background-color: #F7F5EC;" />
+              <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1741210191-head-nano-ti-110-squash-racket-67c8c240d8600.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="Founder 1 Hover" class="profile-image profile-image-hover" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+            </div>
+            <div class="profile-name" style="font-size: 24px; font-weight: 600; color: #6F6A37; margin-bottom: 10px;">
+              Founder Name
+            </div>
+            <div class="profile-experience" style="font-size: 16px; color: #695647; line-height: 1.6;">
+              Experience description goes here. This can include years of experience, expertise areas, and key achievements.
+            </div>
+          </div>
+          <!-- Founder 2 -->
+          <div class="team-profile-card" style="text-align: center;" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-delay="50">
+            <div class="profile-image-wrapper partner-image-wrapper" style="margin-bottom: 20px; position: relative; width: 100%; max-width: 300px; height: 300px; margin: 0 auto; overflow: hidden;">
+              <img src="https://sociology.columbia.edu/themes/custom/columbia/assets/img/people-default.svg" alt="Founder 2" class="profile-image profile-image-default" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block; background-color: #F7F5EC;" />
+              <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1741210191-head-nano-ti-110-squash-racket-67c8c240d8600.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="Founder 2 Hover" class="profile-image profile-image-hover" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+            </div>
+            <div class="profile-name" style="font-size: 24px; font-weight: 600; color: #6F6A37; margin-bottom: 10px;">
+              Founder Name
+            </div>
+            <div class="profile-experience" style="font-size: 16px; color: #695647; line-height: 1.6;">
+              Experience description goes here. This can include years of experience, expertise areas, and key achievements.
+            </div>
+          </div>
+          <!-- Founder 3 -->
+          <div class="team-profile-card" style="text-align: center;" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-delay="100">
+            <div class="profile-image-wrapper partner-image-wrapper" style="margin-bottom: 20px; position: relative; width: 100%; max-width: 300px; height: 300px; margin: 0 auto; overflow: hidden;">
+              <img src="https://sociology.columbia.edu/themes/custom/columbia/assets/img/people-default.svg" alt="Founder 3" class="profile-image profile-image-default" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block; background-color: #F7F5EC;" />
+              <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1741210191-head-nano-ti-110-squash-racket-67c8c240d8600.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="Founder 3 Hover" class="profile-image profile-image-hover" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+            </div>
+            <div class="profile-name" style="font-size: 24px; font-weight: 600; color: #6F6A37; margin-bottom: 10px;">
+              Founder Name
+            </div>
+            <div class="profile-experience" style="font-size: 16px; color: #695647; line-height: 1.6;">
+              Experience description goes here. This can include years of experience, expertise areas, and key achievements.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block block-block-content block-block-content-partners clearfix" id="supporting-partners">
+    <div class="team-profiles-section" style="background-color: #F7F5EC; padding: 60px 0;">
+      <div class="container">
+        <div class="wrapper-title" style="text-align: center; margin-bottom: 50px; color: #6F6A37;" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="800">
+          <h2 style="font-size: 36px; font-weight: 500; margin-bottom: 20px;">Supporting Partners</h2>
+        </div>
+        <div class="team-profiles-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1200px; margin: 0 auto;">
+          <!-- Partner 1 -->
+          <div class="team-profile-card" style="text-align: center;" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-delay="0">
+            <div class="profile-image-wrapper partner-image-wrapper" style="margin-bottom: 20px; position: relative; width: 100%; max-width: 300px; height: 300px; margin: 0 auto; overflow: hidden;">
+              <img src="https://sociology.columbia.edu/themes/custom/columbia/assets/img/people-default.svg" alt="Partner 1" class="profile-image profile-image-default" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block; background-color: #F7F5EC;" />
+              <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1741210191-head-nano-ti-110-squash-racket-67c8c240d8600.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="Partner 1 Hover" class="profile-image profile-image-hover" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+            </div>
+            <div class="profile-name" style="font-size: 24px; font-weight: 600; color: #6F6A37; margin-bottom: 10px;">
+              Partner Name
+            </div>
+            <div class="profile-experience" style="font-size: 16px; color: #695647; line-height: 1.6;">
+              Experience description goes here. This can include years of experience, expertise areas, and key achievements.
+            </div>
+          </div>
+          <!-- Partner 2 -->
+          <div class="team-profile-card" style="text-align: center;" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-delay="50">
+            <div class="profile-image-wrapper partner-image-wrapper" style="margin-bottom: 20px; position: relative; width: 100%; max-width: 300px; height: 300px; margin: 0 auto; overflow: hidden;">
+              <img src="https://sociology.columbia.edu/themes/custom/columbia/assets/img/people-default.svg" alt="Partner 2" class="profile-image profile-image-default" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block; background-color: #F7F5EC;" />
+              <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1741210191-head-nano-ti-110-squash-racket-67c8c240d8600.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="Partner 2 Hover" class="profile-image profile-image-hover" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+            </div>
+            <div class="profile-name" style="font-size: 24px; font-weight: 600; color: #6F6A37; margin-bottom: 10px;">
+              Partner Name
+            </div>
+            <div class="profile-experience" style="font-size: 16px; color: #695647; line-height: 1.6;">
+              Experience description goes here. This can include years of experience, expertise areas, and key achievements.
+            </div>
+          </div>
+          <!-- Partner 3 -->
+          <div class="team-profile-card" style="text-align: center;" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-delay="100">
+            <div class="profile-image-wrapper partner-image-wrapper" style="margin-bottom: 20px; position: relative; width: 100%; max-width: 300px; height: 300px; margin: 0 auto; overflow: hidden;">
+              <img src="https://sociology.columbia.edu/themes/custom/columbia/assets/img/people-default.svg" alt="Partner 3" class="profile-image profile-image-default" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block; background-color: #F7F5EC;" />
+              <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1741210191-head-nano-ti-110-squash-racket-67c8c240d8600.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="Partner 3 Hover" class="profile-image profile-image-hover" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+            </div>
+            <div class="profile-name" style="font-size: 24px; font-weight: 600; color: #6F6A37; margin-bottom: 10px;">
+              Partner Name
+            </div>
+            <div class="profile-experience" style="font-size: 16px; color: #695647; line-height: 1.6;">
+              Experience description goes here. This can include years of experience, expertise areas, and key achievements.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
       
   <section class="block block-block-content block-block-contenta08b3346-484b-4e6c-bdb8-b2d13b2962ec clearfix" id="_00-stories">
           <div class="wrapper-imgs-txt">
@@ -628,7 +796,7 @@
       </div>
     </div>
   </div>
-</article>
+  </article>
 </div></div></div>
   <div class="slick__slide slide slide--1"><div class="views-field views-field-field-ref-content"><div class="field-content"><article class="article is-promoted component-k clearfix">
   <div class="content">
@@ -963,22 +1131,22 @@
                     
             <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop" alt="Advisory & Capital" class="img-responsive" />
 
-
-</div>
-      
+        
+      </div>
+    
                   </a>
                 <div class="wrapper-content">
           <div class="wrapper-content-title">
                                                           <a href="#" target="_blank">
-                            
+
 <span>Advisory & Capital</span>
 
                               </a>
-                                    </div>
+    </div>
                               <a href="#" target="_blank">
                         <div class="wrapper-content-description">
               Strategy, structure, and partnerships that scale with confidence.
-            </div>
+  </div>
                       </a>
                   </div>
       </div>
@@ -992,10 +1160,10 @@
       <div class="wrapper-content-link">
         
             <div class="field field--name-field-link2 field--type-link field--label-hidden field--item"><a href="#" target="_blank">Explore</a></div>
-      
+
+</div>
       </div>
-    </div>
-  </div>
+        </div>
 </article>
 </div></div></div>
 </div>
@@ -1003,13 +1171,13 @@
         <button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0">Previous</button><button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0">Next</button>
       </nav>
     </div>
+      
+        </div>
+      
+        </div>
+      </div>
 
     </div>
-  
-          </div>
-</div>
-
-          </div>
   </div>
 </div>
 
@@ -1017,49 +1185,6 @@
         
       </div>
     
-  </section>
-
-
-    </div>
-  </div>
-  <div class="layout layout--onecol">
-    <div  class="layout__region layout__region--content">
-      
-  <section class="block block-block-content block-block-content6e5791f5-db23-44e8-aa47-57f5eda1d6a1 clearfix" id="_00-impacts">
-          <div class="wrapper-imgs-txt">
-        
-          
-<div class="wrapper-component-d-a" style="background-color: #F7F5EC">
-  <div class="wrapper-component-d-a-wrapper">
-    <div class="row">
-      <div class="col-md-6 wrapper-image" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
-        
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="../sites/btg/files/styles/component_d/public/2025-08/HM%20Saranam%20-%20S4G%202%20(2).jpg.webp%3Fitok=kUf0Pekb" width="830" height="973" alt="" class="img-responsive" />
-
-
-</div>
-      
-      </div>
-      <div class="col-md-6 wrapper-content">
-        <div class="wrapper-title" style="color: #6F6A37" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
-          100 Impacts
-        </div>
-        <div class="wrapper-description" style="color: #6F6A37" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
-          
-            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p>Watch the stories of our impact-makers worldwide. From KOSAI Wellness and Consulting associates knee-deep in conservation work to community partners preserving traditions, every journey begins with purpose, and ends with impact.</p></div>
-      
-        </div>
-        <div class="wrapper-link" style="color: #6F6A37" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
-          
-            <div class="field field--name-field-link field--type-link field--label-hidden field--item"><a href="mission.html" target="_blank">Discover</a></div>
-      
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-        
-      </div>
       </section>
 
 
@@ -1178,9 +1303,19 @@
   
 
         
-            <ul class="menu menu--footer-col-1 nav">
-                      <li class="first">
-        <li class="menu-item menu-item--expanded">          <a href="../about-us.html" data-drupal-link-system-path="node/about-us">About Us</a>                      <a href="../about-us.html" class="link-without-arrow">              <img class="menu-item-image img-responsive"                   src="../sites/btg/files/styles/hero_banner/public/2023-12/New%20About%20Us%20Banner%20Image_opacity_0.jpg.webp%3Fitok=xpJ4LMYN"                   alt="About Us"/>            </a>                                      <ul class="menu-item menu-item--expanded menu menu-level-1">                                                <li class="menu-item">          <a href="about-us/our-team.html" class="link-has-arrow" data-drupal-link-system-path="node/our-team">Our Team</a>                                                    </li>          </ul>                    </li>        </ul>
+      <ul class="menu menu--footer-col-1 nav">
+        <li class="menu-item menu-item--expanded first">
+          <a href="../about-us.html" data-drupal-link-system-path="node/about-us">About Us</a>
+          <a href="../about-us.html" class="link-without-arrow">
+            <img class="menu-item-image img-responsive" src="../images/photos/aboutus_nav.jpg" alt="About Us"/>
+          </a>
+          <ul class="menu menu-level-1">
+            <li class="menu-item">
+              <a href="about-us/our-team.html" class="link-has-arrow" data-drupal-link-system-path="node/our-team">Our Team</a>
+              </li>
+          </ul>
+              </li>
+        </ul>
   
 
   </nav>
@@ -1190,7 +1325,7 @@
   
 
         
-            <ul class="menu menu--footer-col-2 nav">
+      <ul class="menu menu--footer-col-2 nav">
                       <li class="first">
                                         <a href="../asset-facility-management.html" data-drupal-link-system-path="node/asset-facility">Asset &amp; Facility Management</a>
               </li>
@@ -1207,7 +1342,7 @@
   
 
         
-            <ul class="menu menu--footer-col-3 nav">
+      <ul class="menu menu--footer-col-3 nav">
                       <li class="first">
                                         <a href="past-projects/hotels-resorts.html" data-drupal-link-system-path="node/past-projects">Past Projects &amp; Experience</a>
               </li>
@@ -1255,7 +1390,7 @@
 
 
 
-  </div>
+</div>
 
   </section>
 
@@ -1458,6 +1593,27 @@
 <script src="../themes/contrib/bootstrap/js/misc/states.js%3Ft7nfev"></script>
 <script src="../modules/contrib/webform/js/webform.states.js%3Ft7nfev"></script>
 <script src="../modules/contrib/webform/js/webform.form.js%3Ft7nfev"></script>
+<script>
+  // Ensure AOS is initialized and refreshed for team profile sections
+  (function() {
+    if (typeof AOS !== 'undefined') {
+      // Wait for DOM and AOS to be ready
+      document.addEventListener('DOMContentLoaded', function() {
+        // Refresh AOS to detect new elements
+        if (AOS.refresh) {
+          AOS.refresh();
+        }
+      });
+      
+      // Also refresh on window load
+      window.addEventListener('load', function() {
+        if (AOS.refresh) {
+          AOS.refresh();
+        }
+      });
+    }
+  })();
+</script>
 
   </body>
 </html>

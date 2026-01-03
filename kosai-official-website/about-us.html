@@ -76,6 +76,22 @@
         object-fit: cover !important;
         display: block !important;
       }
+      /* Fix menu image positioning for titles that wrap to two lines */
+      .menu.menu-level-0 > .menu-item--expanded {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+      }
+      .menu.menu-level-0 > .menu-item--expanded > a:first-child {
+        min-height: 48px !important;
+        display: flex !important;
+        align-items: center !important;
+        line-height: 1.2 !important;
+      }
+      .menu.menu-level-0 > .menu-item--expanded > .link-without-arrow {
+        margin-top: 10px !important;
+        width: 100% !important;
+      }
     </style>
 </head>
   <body class="no-subnav about-us-page path-node page-node-type-page has-glyphicons">
@@ -106,7 +122,7 @@
         
 
           
-            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p><a href="index.html"><img src="themes/custom/banyantree/images/kosai-logo.png" alt="About Us" style="height: 64px;" /></a></p>
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p><a href="index.html"><img src="images/photos/logos/kosailogo_white.png" alt="About Us" style="height: 64px;" /></a></p>
 </div>
       
       </section>
@@ -156,7 +172,7 @@
           <a href="about-us.html" data-drupal-link-system-path="node/about-us">About Us</a>
                       <a href="about-us.html" class="link-without-arrow">
               <img class="menu-item-image img-responsive"
-                   src="sites/btg/files/styles/hero_banner/public/2023-12/New%20About%20Us%20Banner%20Image_opacity_0.jpg.webp%3Fitok=xpJ4LMYN"
+                   src="images/photos/aboutus_nav.jpg"
                    alt="About Us"/>
             </a>
                                       <ul class="menu-item menu-item--expanded menu menu-level-1">
@@ -173,33 +189,33 @@
           <a href="asset-facility-management.html" data-drupal-link-system-path="node/asset-facility">Asset &amp; Facility Management</a>
                       <a href="asset-facility-management.html" class="link-without-arrow">
               <img class="menu-item-image img-responsive"
-                   src="sites/btg/files/2023-12/Hotels%20menu%20card.jpg"
+                   src="images/photos/asset_nav.jpg"
                    alt="Asset &amp; Facility Management"/>
             </a>
                                       <ul class="menu-item menu-item--expanded menu menu-level-1">
                                         
         <li class="menu-item">
-          <a href="our-solutions/hotel-resort-management.html" class="link-has-arrow" data-drupal-link-system-path="node/hotel-resort">Hotel &amp; Resort Management</a>
+          <a href="asset-facility-management.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/hotel-resort">Hotel &amp; Resort Management</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/residential-lifestyle-management.html" class="link-has-arrow" data-drupal-link-system-path="node/residential-lifestyle">Residential &amp; Lifestyle Mgmt</a>
+          <a href="asset-facility-management.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/residential-lifestyle">Residential &amp; Lifestyle Management</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/cre-management.html" class="link-has-arrow" data-drupal-link-system-path="node/cre-management">CRE Management</a>
+          <a href="asset-facility-management.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/cre-management">CRE Management</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/spa-wellness-management.html" class="link-has-arrow" data-drupal-link-system-path="node/spa-wellness">Spa &amp; Wellness Management</a>
+          <a href="asset-facility-management.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/spa-wellness">Spa &amp; Wellness Management</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/sports-fitness-management.html" class="link-has-arrow" data-drupal-link-system-path="node/sports-fitness">Sports &amp; Fitness Management</a>
+          <a href="asset-facility-management.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/sports-fitness">Sports &amp; Fitness Management</a>
                                   
                   </li>
           </ul>
@@ -210,28 +226,28 @@
           <a href="corporate-advisory-services.html" data-drupal-link-system-path="node/corporate-advisory">Corporate Advisory &amp; Services</a>
                       <a href="corporate-advisory-services.html" class="link-without-arrow">
               <img class="menu-item-image img-responsive"
-                   src="sites/btg/files/2023-12/Hotels%20menu%20card.jpg"
+                   src="images/photos/corporate_nav.jpg"
                    alt="Corporate Advisory &amp; Services"/>
             </a>
                                       <ul class="menu-item menu-item--expanded menu menu-level-1">
                                         
         <li class="menu-item">
-          <a href="our-solutions/business-advisory-capital.html" class="link-has-arrow" data-drupal-link-system-path="node/business-advisory">Business Advisory &amp; Capital</a>
+          <a href="corporate-advisory-services.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/business-advisory">Business Advisory &amp; Capital</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/sales-marketing-strategy.html" class="link-has-arrow" data-drupal-link-system-path="node/sales-marketing">Sales &amp; Marketing Strategy</a>
+          <a href="corporate-advisory-services.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/sales-marketing">Sales &amp; Marketing Strategy</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/executive-recruitment.html" class="link-has-arrow" data-drupal-link-system-path="node/executive-recruitment">Executive Recruitment</a>
+          <a href="corporate-advisory-services.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/executive-recruitment">Executive Recruitment</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/architecture-construction.html" class="link-has-arrow" data-drupal-link-system-path="node/architecture-construction">Architecture &amp; Construction</a>
+          <a href="corporate-advisory-services.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/architecture-construction">Architecture &amp; Construction</a>
                                   
                   </li>
           </ul>
@@ -242,7 +258,7 @@
           <a href="past-projects/hotels-resorts.html" data-drupal-link-system-path="node/past-projects">Past Projects &amp; Experience</a>
                       <a href="past-projects/hotels-resorts.html" class="link-without-arrow">
               <img class="menu-item-image img-responsive"
-                   src="sites/btg/files/styles/hero_banner/public/2023-12/New%20About%20Us%20Banner%20Image_opacity_0.jpg.webp%3Fitok=xpJ4LMYN"
+                   src="images/photos/pastproject_nav.jpg"
                    alt="Past Projects &amp; Experience"/>
             </a>
                                       <ul class="menu-item menu-item--expanded menu menu-level-1">
@@ -274,7 +290,7 @@
           <a href="contact.html" data-drupal-link-system-path="node/contact">Contact Us &amp; Careers</a>
                       <a href="contact.html" class="link-without-arrow">
               <img class="menu-item-image img-responsive"
-                   src="sites/btg/files/2022-08/mission.png"
+                   src="images/contact_nav.jpg"
                    alt="Contact Us &amp; Careers"/>
             </a>
                                       <ul class="menu-item menu-item--expanded menu menu-level-1">
@@ -364,7 +380,7 @@
        data-opacity-bottom="80">
           <div class="wrapper-image ">
         
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/hero_banner/public/2023-12/New%20About%20Us%20Banner%20Image_opacity_0.jpg.webp%3Fitok=xpJ4LMYN" width="1920" height="704" alt="" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/aboutus_nav.jpg" width="1920" height="704" alt="" class="img-responsive" />
 
 
 </div>
@@ -477,7 +493,7 @@
     </div>
     <div class="wrapper-image">
       
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/component_w_vertical_img/public/2023-12/Exploring%20New%20Frontiers_0.jpg.webp%3Fitok=Tpqf4cYn" width="538" height="866" alt="" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/aboutus_nav.jpg" width="538" height="866" alt="" class="img-responsive" />
 
 
 </div>
@@ -571,7 +587,7 @@
     </div>
     <div class="wrapper-image">
       
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/component_w_vertical_img/public/2023-12/Brands%20that%20speak%20to%20you.jpg.webp%3Fitok=HAkDrTDS" width="538" height="866" alt="" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/aboutus_nav.jpg" width="538" height="866" alt="" class="img-responsive" />
 
 
 </div>
@@ -1761,7 +1777,7 @@
         
             <ul class="menu menu--footer-col-1 nav">
                       <li class="first">
-        <li class="menu-item menu-item--expanded">          <a href="about-us.html" data-drupal-link-system-path="node/about-us">About Us</a>                      <a href="about-us.html" class="link-without-arrow">              <img class="menu-item-image img-responsive"                   src="sites/btg/files/styles/hero_banner/public/2023-12/New%20About%20Us%20Banner%20Image_opacity_0.jpg.webp%3Fitok=xpJ4LMYN"                   alt="About Us"/>            </a>                                      <ul class="menu-item menu-item--expanded menu menu-level-1">                                                <li class="menu-item">          <a href="about-us/our-team.html" class="link-has-arrow" data-drupal-link-system-path="node/our-team">Our Team</a>                                                    </li>          </ul>                    </li>        </ul>
+        <li class="menu-item menu-item--expanded">          <a href="about-us.html" data-drupal-link-system-path="node/about-us">About Us</a>                      <a href="about-us.html" class="link-without-arrow">              <img class="menu-item-image img-responsive"                   src="images/photos/aboutus_nav.jpg"                   alt="About Us"/>            </a>                                      <ul class="menu-item menu-item--expanded menu menu-level-1">                                                <li class="menu-item">          <a href="about-us/our-team.html" class="link-has-arrow" data-drupal-link-system-path="node/our-team">Our Team</a>                                                    </li>          </ul>                    </li>        </ul>
   
 
   </nav>

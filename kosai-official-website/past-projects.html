@@ -90,6 +90,22 @@
         object-fit: cover !important;
         display: block !important;
       }
+      /* Fix menu image positioning for titles that wrap to two lines */
+      .menu.menu-level-0 > .menu-item--expanded {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+      }
+      .menu.menu-level-0 > .menu-item--expanded > a:first-child {
+        min-height: 48px !important;
+        display: flex !important;
+        align-items: center !important;
+        line-height: 1.2 !important;
+      }
+      .menu.menu-level-0 > .menu-item--expanded > .link-without-arrow {
+        margin-top: 10px !important;
+        width: 100% !important;
+      }
     </style>
 </head>
   <body class="path-node page-node-type-page has-glyphicons">
@@ -121,7 +137,7 @@
         
 
           
-            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p><a href="index.html"><img src="themes/custom/banyantree/images/kosai-logo.png" alt="PAST PROJECTS & EXPERIENCE" style="height: 64px;" /></a></p>
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p><a href="index.html"><img src="images/photos/logos/kosailogo_white.png" alt="PAST PROJECTS & EXPERIENCE" style="height: 64px;" /></a></p>
 </div>
       
       </section>
@@ -171,7 +187,7 @@
           <a href="about-us.html" data-drupal-link-system-path="node/about-us">About Us</a>
                       <a href="about-us.html" class="link-without-arrow">
               <img class="menu-item-image img-responsive"
-                   src="sites/btg/files/styles/hero_banner/public/2023-12/New%20About%20Us%20Banner%20Image_opacity_0.jpg.webp%3Fitok=xpJ4LMYN"
+                   src="images/photos/aboutus_nav.jpg"
                    alt="About Us"/>
             </a>
                                       <ul class="menu-item menu-item--expanded menu menu-level-1">
@@ -188,33 +204,33 @@
           <a href="asset-facility-management.html" data-drupal-link-system-path="node/asset-facility">Asset &amp; Facility Management</a>
                       <a href="asset-facility-management.html" class="link-without-arrow">
               <img class="menu-item-image img-responsive"
-                   src="sites/btg/files/2023-12/Hotels%20menu%20card.jpg"
+                   src="images/photos/asset_nav.jpg"
                    alt="Asset &amp; Facility Management"/>
             </a>
                                       <ul class="menu-item menu-item--expanded menu menu-level-1">
                                         
         <li class="menu-item">
-          <a href="our-solutions/hotel-resort-management.html" class="link-has-arrow" data-drupal-link-system-path="node/hotel-resort">Hotel &amp; Resort Management</a>
+          <a href="asset-facility-management.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/hotel-resort">Hotel &amp; Resort Management</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/residential-lifestyle-management.html" class="link-has-arrow" data-drupal-link-system-path="node/residential-lifestyle">Residential &amp; Lifestyle Mgmt</a>
+          <a href="asset-facility-management.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/residential-lifestyle">Residential &amp; Lifestyle Management</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/cre-management.html" class="link-has-arrow" data-drupal-link-system-path="node/cre-management">CRE Management</a>
+          <a href="asset-facility-management.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/cre-management">CRE Management</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/spa-wellness-management.html" class="link-has-arrow" data-drupal-link-system-path="node/spa-wellness">Spa &amp; Wellness Management</a>
+          <a href="asset-facility-management.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/spa-wellness">Spa &amp; Wellness Management</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/sports-fitness-management.html" class="link-has-arrow" data-drupal-link-system-path="node/sports-fitness">Sports &amp; Fitness Management</a>
+          <a href="asset-facility-management.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/sports-fitness">Sports &amp; Fitness Management</a>
                                   
                   </li>
           </ul>
@@ -225,28 +241,28 @@
           <a href="corporate-advisory-services.html" data-drupal-link-system-path="node/corporate-advisory">Corporate Advisory &amp; Services</a>
                       <a href="corporate-advisory-services.html" class="link-without-arrow">
               <img class="menu-item-image img-responsive"
-                   src="sites/btg/files/2023-12/Hotels%20menu%20card.jpg"
+                   src="images/photos/corporate_nav.jpg"
                    alt="Corporate Advisory &amp; Services"/>
             </a>
                                       <ul class="menu-item menu-item--expanded menu menu-level-1">
                                         
         <li class="menu-item">
-          <a href="our-solutions/business-advisory-capital.html" class="link-has-arrow" data-drupal-link-system-path="node/business-advisory">Business Advisory &amp; Capital</a>
+          <a href="corporate-advisory-services.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/business-advisory">Business Advisory &amp; Capital</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/sales-marketing-strategy.html" class="link-has-arrow" data-drupal-link-system-path="node/sales-marketing">Sales &amp; Marketing Strategy</a>
+          <a href="corporate-advisory-services.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/sales-marketing">Sales &amp; Marketing Strategy</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/executive-recruitment.html" class="link-has-arrow" data-drupal-link-system-path="node/executive-recruitment">Executive Recruitment</a>
+          <a href="corporate-advisory-services.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/executive-recruitment">Executive Recruitment</a>
                                   
                   </li>
                                         
         <li class="menu-item">
-          <a href="our-solutions/architecture-construction.html" class="link-has-arrow" data-drupal-link-system-path="node/architecture-construction">Architecture &amp; Construction</a>
+          <a href="corporate-advisory-services.html#our-services" class="link-has-arrow" data-drupal-link-system-path="node/architecture-construction">Architecture &amp; Construction</a>
                                   
                   </li>
           </ul>
@@ -257,7 +273,7 @@
           <a href="past-projects/hotels-resorts.html" data-drupal-link-system-path="node/past-projects">Past Projects &amp; Experience</a>
                       <a href="past-projects/hotels-resorts.html" class="link-without-arrow">
               <img class="menu-item-image img-responsive"
-                   src="sites/btg/files/styles/hero_banner/public/2023-12/New%20About%20Us%20Banner%20Image_opacity_0.jpg.webp%3Fitok=xpJ4LMYN"
+                   src="images/photos/pastproject_nav.jpg"
                    alt="Past Projects &amp; Experience"/>
             </a>
                                       <ul class="menu-item menu-item--expanded menu menu-level-1">
@@ -289,7 +305,7 @@
           <a href="contact.html" data-drupal-link-system-path="node/contact">Contact Us &amp; Careers</a>
                       <a href="contact.html" class="link-without-arrow">
               <img class="menu-item-image img-responsive"
-                   src="sites/btg/files/2022-08/mission.png"
+                   src="images/contact_nav.jpg"
                    alt="Contact Us &amp; Careers"/>
             </a>
                                       <ul class="menu-item menu-item--expanded menu menu-level-1">
@@ -385,7 +401,7 @@
        data-opacity-bottom="50">
           <div class="wrapper-image opacity-part">
         
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/hero_banner/public/2023-12/New%20About%20Us%20Banner%20Image_opacity_0.jpg.webp%3Fitok=xpJ4LMYN" width="1920" height="704" alt="8 PILLARS OF WELLBEING" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" width="1920" height="704" alt="8 PILLARS OF WELLBEING" class="img-responsive" />
 
 
 </div>
@@ -413,13 +429,13 @@
     <div class="simple-title-component">
       
       
-<div class="wrapper-component-h-a" style="background-color: #fbf8ee">
+<div class="wrapper-component-h-a" style="background-color: #F7F5EC">
   <div class="wrapper-title" style="color: #000000">
    
   </div>
   <div class="wrapper-content" style="color: #000000">
     
-            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p>KOSAI has successfully delivered projects across multiple sectors, building a portfolio of excellence in hospitality, wellness, fitness, and commercial real estate. Explore our track record of transformative projects and proven results.</p></div>
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p>KOSAI has successfully delivered projects across multiple sectors, building a portfolio of excellence in hospitality, wellness, fitness, and commercial real estate. Our track record speaks to our ability to transform vision into operating reality—from concept to launch, from launch to growth.</p></div>
       
   </div>
   <div class="wrapper-link" style="color: #000000">
@@ -439,108 +455,88 @@
 <div class="wrapper-component-n">
 <div class="wrapper-component-n-wrapper">
   <div class="wrapper-title">
-    EXPERIENCES
+    PROJECT CATEGORIES
   </div>
   <div class="wrapper-sliders">
     
       <div class="field field--name-field-cards-slider field--type-entity-reference-revisions field--label-hidden field--items">
-              <div class="field--item"><div class="slick blazy slick--field slick--field-cards-slider slick--field-cards-slider--component-n slick--optionset--_-item-component-n" data-blazy=""><div id="slick-9ab88e5ed64" data-slick="{&quot;count&quot;:5,&quot;total&quot;:5,&quot;lazyLoad&quot;:&quot;blazy&quot;,&quot;responsive&quot;:[{&quot;breakpoint&quot;:4000,&quot;settings&quot;:{&quot;dots&quot;:true,&quot;slidesToShow&quot;:3,&quot;swipeToSlide&quot;:true,&quot;waitForAnimate&quot;:false}},{&quot;breakpoint&quot;:1025,&quot;settings&quot;:{&quot;dots&quot;:true,&quot;slidesToShow&quot;:2,&quot;swipeToSlide&quot;:true,&quot;variableWidth&quot;:true,&quot;waitForAnimate&quot;:false}},{&quot;breakpoint&quot;:452,&quot;settings&quot;:{&quot;dots&quot;:true,&quot;swipeToSlide&quot;:true,&quot;variableWidth&quot;:true,&quot;waitForAnimate&quot;:false}}]}" class="slick__slider">  <div class="slick__slide slide slide--0">  <div class="paragraph paragraph--type--products-highlights paragraph--view-mode--default">
-                          <a href="https://www.garrya.com/en/destinations/yogyakarta/offers/mindful-retreat" target="_blank">
+              <div class="field--item"><div class="slick blazy slick--field slick--field-cards-slider slick--field-cards-slider--component-n slick--optionset--_-item-component-n" data-blazy=""><div id="slick-9ab88e5ed64" data-slick="{&quot;count&quot;:4,&quot;total&quot;:4,&quot;lazyLoad&quot;:&quot;blazy&quot;,&quot;responsive&quot;:[{&quot;breakpoint&quot;:4000,&quot;settings&quot;:{&quot;dots&quot;:true,&quot;slidesToShow&quot;:3,&quot;swipeToSlide&quot;:true,&quot;waitForAnimate&quot;:false}},{&quot;breakpoint&quot;:1025,&quot;settings&quot;:{&quot;dots&quot;:true,&quot;slidesToShow&quot;:2,&quot;swipeToSlide&quot;:true,&quot;variableWidth&quot;:true,&quot;waitForAnimate&quot;:false}},{&quot;breakpoint&quot;:452,&quot;settings&quot;:{&quot;dots&quot;:true,&quot;swipeToSlide&quot;:true,&quot;variableWidth&quot;:true,&quot;waitForAnimate&quot;:false}}]}" class="slick__slider">  <div class="slick__slide slide slide--0">  <div class="paragraph paragraph--type--products-highlights paragraph--view-mode--default">
+                          <a href="past-projects/hotels-resorts.html" target="_self">
             
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/component_n/public/2025-03/mindful-retreat.jpg.webp%3Fitok=KRJcSD8P" width="625" height="515" alt="" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" width="625" height="515" alt="Hotels &amp; Resorts" class="img-responsive" />
 
 
 </div>
       
       
-            <div class="field field--name-field-title field--type-string field--label-hidden field--item">Mindful Retreat</div>
+            <div class="field field--name-field-title field--type-string field--label-hidden field--item">Hotels &amp; Resorts</div>
       
               </a>
             
-            <div class="field field--name-field-content field--type-text-long field--label-hidden field--item"><h6><strong>Garrya Bianti Yogyakarta</strong></h6><p>Experience a rejuvenating escape with curated wellness experiences.</p></div>
+            <div class="field field--name-field-content field--type-text-long field--label-hidden field--item"><h6><strong>Hotels &amp; Resorts</strong></h6><p>Luxury hospitality projects that set new standards in guest experience and operational excellence.</p></div>
       
       
-            <div class="field field--name-field-link field--type-link field--label-hidden field--item"><a href="https://www.garrya.com/en/destinations/yogyakarta/offers/mindful-retreat" target="_blank">https://www.garrya.com/en/destinations/yogyakarta/offers/mindful-retreat</a></div>
+            <div class="field field--name-field-link field--type-link field--label-hidden field--item"><a href="past-projects/hotels-resorts.html">View Projects</a></div>
       
       </div>
 </div>
   <div class="slick__slide slide slide--1">  <div class="paragraph paragraph--type--products-highlights paragraph--view-mode--default">
-                          <a href="https://veya.banyantree.com/en/destinations/valle-de-guadalupe/valle-de-guadalupe-wellbeing" target="">
+                          <a href="past-projects/restaurants.html" target="_self">
             
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/component_n/public/2024-08/Labyrinth%20Meditation_.jpg.webp%3Fitok=WpuUreoG" width="625" height="515" alt="KOSAI Veya, Valle de Guadalupe labyrinth meditation" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" width="625" height="515" alt="Restaurants" class="img-responsive" />
 
 
 </div>
       
       
-            <div class="field field--name-field-title field--type-string field--label-hidden field--item">Labyrinth Meditation</div>
+            <div class="field field--name-field-title field--type-string field--label-hidden field--item">Restaurants</div>
       
               </a>
             
-            <div class="field field--name-field-content field--type-text-long field--label-hidden field--item"><h6><strong>KOSAI Veya, Valle de Guadalupe</strong></h6><p>Mindfully walk through nature in our Malva labyrinth.</p></div>
+            <div class="field field--name-field-content field--type-text-long field--label-hidden field--item"><h6><strong>Restaurants</strong></h6><p>Culinary concepts and F&B operations that create memorable dining experiences and strong financial performance.</p></div>
       
       
-            <div class="field field--name-field-link field--type-link field--label-hidden field--item"><a href="https://veya.banyantree.com/en/destinations/valle-de-guadalupe/valle-de-guadalupe-wellbeing">KOSAI Veya, Valle de Guadalupe</a></div>
+            <div class="field field--name-field-link field--type-link field--label-hidden field--item"><a href="past-projects/restaurants.html">View Projects</a></div>
       
       </div>
 </div>
   <div class="slick__slide slide slide--2">  <div class="paragraph paragraph--type--products-highlights paragraph--view-mode--default">
-                          <a href="https://www.garrya.com/en/destinations/kyoto/experience/tea-experience" target="">
+                          <a href="past-projects/spa-wellness.html" target="_self">
             
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/component_n/public/2024-08/Matcha%20Tea%20Experience_.jpg.webp%3Fitok=nXTYMKRL" width="625" height="515" alt="Garrya Nijo Castle Kyoto matcha green tea" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" width="625" height="515" alt="Spa &amp; Wellness" class="img-responsive" />
 
 
 </div>
       
       
-            <div class="field field--name-field-title field--type-string field--label-hidden field--item">Matcha Tea Experience</div>
+            <div class="field field--name-field-title field--type-string field--label-hidden field--item">Spa &amp; Wellness</div>
       
               </a>
             
-            <div class="field field--name-field-content field--type-text-long field--label-hidden field--item"><h6><strong>Garrya Nijo Castle Kyoto</strong></h6><p>Simplified matcha experience guided by IPPODO-trained staff.</p></div>
+            <div class="field field--name-field-content field--type-text-long field--label-hidden field--item"><h6><strong>Spa &amp; Wellness</strong></h6><p>Wellness facilities and spa operations that deliver transformative experiences and sustainable business models.</p></div>
       
       
-            <div class="field field--name-field-link field--type-link field--label-hidden field--item"><a href="https://www.garrya.com/en/destinations/kyoto/experience/tea-experience">Garrya Nijo Castle, Kyoto</a></div>
+            <div class="field field--name-field-link field--type-link field--label-hidden field--item"><a href="past-projects/spa-wellness.html">View Projects</a></div>
       
       </div>
 </div>
   <div class="slick__slide slide slide--3">  <div class="paragraph paragraph--type--products-highlights paragraph--view-mode--default">
-                          <a href="https://www.garrya.com/en/destinations/yogyakarta/experiences" target="">
+                          <a href="past-projects/recruitment.html" target="_self">
             
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/component_n/public/2024-08/Bianti%20Swing%20Yoga_.jpg.webp%3Fitok=Md0CTHoQ" width="625" height="515" alt="Garrya Bianti, Yogyakarta aerial yoga" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" width="625" height="515" alt="Recruitment" class="img-responsive" />
 
 
 </div>
       
       
-            <div class="field field--name-field-title field--type-string field--label-hidden field--item">Swing Yoga</div>
+            <div class="field field--name-field-title field--type-string field--label-hidden field--item">Recruitment</div>
       
               </a>
             
-            <div class="field field--name-field-content field--type-text-long field--label-hidden field--item"><h6><strong>Garrya Bianti Yogyakarta</strong></h6><p>Yoga meets aerial acrobatics in silk hammocks for enhanced flexibility and balance.</p></div>
+            <div class="field field--name-field-content field--type-text-long field--label-hidden field--item"><h6><strong>Recruitment</strong></h6><p>Executive search and talent placement that builds high-performing teams aligned with organizational culture and goals.</p></div>
       
       
-            <div class="field field--name-field-link field--type-link field--label-hidden field--item"><a href="https://www.garrya.com/en/destinations/yogyakarta/experiences">Garrya Bianti, Yogyakarta</a></div>
-      
-      </div>
-</div>
-  <div class="slick__slide slide slide--4">  <div class="paragraph paragraph--type--products-highlights paragraph--view-mode--default">
-                          <a href="https://www.banyantree.com/china/chongqing-beibei/experiences/local-attractions" target="">
-            
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/component_n/public/2024-08/Hot%20Springs_.jpg.webp%3Fitok=jXlIeNCf" width="625" height="515" alt="KOSAI Chongqing Beibei hot springs" class="img-responsive" />
-
-
-</div>
-      
-      
-            <div class="field field--name-field-title field--type-string field--label-hidden field--item">Chongqing Hot Springs</div>
-      
-              </a>
-            
-            <div class="field field--name-field-content field--type-text-long field--label-hidden field--item"><h6><strong>KOSAI Chongqing Beibei</strong></h6><p>Relax by the Jialing River in Chongqing’s North Hot Spring.</p></div>
-      
-      
-            <div class="field field--name-field-link field--type-link field--label-hidden field--item"><a href="https://www.banyantree.com/china/chongqing-beibei/experiences/local-attractions">KOSAI Chongqing Beibei</a></div>
+            <div class="field field--name-field-link field--type-link field--label-hidden field--item"><a href="past-projects/recruitment.html">View Projects</a></div>
       
       </div>
 </div>
@@ -559,6 +555,178 @@
       </div>
     
   </section>
+
+
+    </div>
+  </div>
+  <div class="layout layout--onecol">
+    <div  class="layout__region layout__region--content">
+      
+  <section class="block block-block-content block-block-content-hotels-resorts clearfix" id="hotels-resorts">
+          <div class="wrapper-imgs-txt">
+        
+          
+<div class="wrapper-component-d-a" style="background-color: #F7F5EC">
+  <div class="wrapper-component-d-a-wrapper">
+    <div class="row">
+      <div class="col-md-6 wrapper-image" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
+        
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" alt="Hotels &amp; Resorts" class="img-responsive" />
+
+
+</div>
+      
+      </div>
+      <div class="col-md-6 wrapper-content">
+        <div class="wrapper-title" style="color: #6F6A37" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
+          Hotels &amp; Resorts
+        </div>
+        <div class="wrapper-description" style="color: #6F6A37" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
+          
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p>From luxury beachfront resorts to urban boutique hotels, KOSAI has delivered hospitality projects that exceed guest expectations and financial targets. Our portfolio includes pre-opening management, operational optimization, and brand positioning that drives occupancy and revenue growth.</p></div>
+      
+        </div>
+        <div class="wrapper-link" style="color: #6F6A37" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
+          
+            <div class="field field--name-field-link field--type-link field--label-hidden field--item"><a href="past-projects/hotels-resorts.html">Explore Projects</a></div>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      </section>
+
+
+    </div>
+  </div>
+  <div class="layout layout--onecol">
+    <div  class="layout__region layout__region--content">
+      
+  <section class="block block-block-content block-block-content-restaurants clearfix" id="restaurants">
+          <div class="wrapper-imgs-txt">
+        
+          
+<div class="wrapper-component-d-a" style="background-color: #F7F5EC">
+  <div class="wrapper-component-d-a-wrapper">
+    <div class="row">
+      <div class="col-md-6 wrapper-content">
+        <div class="wrapper-title" style="color: #6F6A37" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
+          Restaurants
+        </div>
+        <div class="wrapper-description" style="color: #6F6A37" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
+          
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p>Our restaurant projects combine culinary excellence with operational discipline. We've launched concepts from fine dining to casual eateries, each designed to create memorable experiences while maintaining healthy margins. Menu development, staff training, and systems integration ensure consistent quality and profitability.</p></div>
+      
+        </div>
+        <div class="wrapper-link" style="color: #6F6A37" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
+          
+            <div class="field field--name-field-link field--type-link field--label-hidden field--item"><a href="past-projects/restaurants.html">Explore Projects</a></div>
+      
+        </div>
+      </div>
+      <div class="col-md-6 wrapper-image" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
+        
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" alt="Restaurants" class="img-responsive" />
+
+
+</div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      </section>
+
+
+    </div>
+  </div>
+  <div class="layout layout--onecol">
+    <div  class="layout__region layout__region--content">
+      
+  <section class="block block-block-content block-block-content-spa-wellness clearfix" id="spa-wellness">
+          <div class="wrapper-imgs-txt">
+        
+          
+<div class="wrapper-component-d-a" style="background-color: #F7F5EC">
+  <div class="wrapper-component-d-a-wrapper">
+    <div class="row">
+      <div class="col-md-6 wrapper-image" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
+        
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" alt="Spa &amp; Wellness" class="img-responsive" />
+
+
+</div>
+      
+      </div>
+      <div class="col-md-6 wrapper-content">
+        <div class="wrapper-title" style="color: #6F6A37" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
+          Spa &amp; Wellness
+        </div>
+        <div class="wrapper-description" style="color: #6F6A37" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
+          
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p>Wellness facilities that transform spaces into sanctuaries of healing and renewal. Our spa projects range from destination wellness centers to hotel-integrated facilities, all designed to deliver authentic experiences that drive guest satisfaction and repeat visits. Treatment protocols, therapist training, and operational systems ensure consistent excellence.</p></div>
+      
+        </div>
+        <div class="wrapper-link" style="color: #6F6A37" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
+          
+            <div class="field field--name-field-link field--type-link field--label-hidden field--item"><a href="past-projects/spa-wellness.html">Explore Projects</a></div>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      </section>
+
+
+    </div>
+  </div>
+  <div class="layout layout--onecol">
+    <div  class="layout__region layout__region--content">
+      
+  <section class="block block-block-content block-block-content-recruitment clearfix" id="recruitment">
+          <div class="wrapper-imgs-txt">
+        
+          
+<div class="wrapper-component-d-a" style="background-color: #F7F5EC">
+  <div class="wrapper-component-d-a-wrapper">
+    <div class="row">
+      <div class="col-md-6 wrapper-content">
+        <div class="wrapper-title" style="color: #6F6A37" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
+          Recruitment
+        </div>
+        <div class="wrapper-description" style="color: #6F6A37" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
+          
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p>Building teams that deliver results. Our recruitment track record spans C-suite placements to operational leaders across hospitality, wellness, and fitness sectors. We match talent to culture, skills to context, and ambition to opportunity—creating teams that drive performance from day one.</p></div>
+      
+        </div>
+        <div class="wrapper-link" style="color: #6F6A37" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
+          
+            <div class="field field--name-field-link field--type-link field--label-hidden field--item"><a href="past-projects/recruitment.html">Explore Projects</a></div>
+      
+        </div>
+      </div>
+      <div class="col-md-6 wrapper-image" data-aos="custom-fade-in" data-aos-easing="ease-in-out" data-aos-duration="1500">
+        
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" alt="Recruitment" class="img-responsive" />
+
+
+</div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      </section>
 
 
   <section class="block block-layout-builder block-inline-blockblock-news clearfix" id="gallery">
@@ -589,7 +757,7 @@
       <div class="wrapper-image-item">
 
                   
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/component_k/public/2024-08/0%20Beata,%20Kimberely,%20Giulia.jpg.webp%3Fitok=HwrDpJqX" width="482" height="727" alt="women banyan group banyan tree escape buahan bali indonesia retreat" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" width="482" height="727" alt="women banyan group banyan tree escape buahan bali indonesia retreat" class="img-responsive" />
 
 
 </div>
@@ -624,7 +792,7 @@
       <div class="wrapper-image-item">
 
                   
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/component_k/public/2024-08/0%20Connection%201.jpg.webp%3Fitok=_97tSnWF" width="482" height="727" alt="women banyan group banyan tree escape buahan bali indonesia retreat" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" width="482" height="727" alt="women banyan group banyan tree escape buahan bali indonesia retreat" class="img-responsive" />
 
 
 </div>
@@ -659,7 +827,7 @@
       <div class="wrapper-image-item">
 
                   
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/component_k/public/2024-08/0%20Soul%20Freedom%20Journey%201.jpg.webp%3Fitok=lLB9PBgS" width="482" height="727" alt="banyan group retreats gallery 3 soul freedom journey bali buahan banyan tree escape waterfall" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" width="482" height="727" alt="banyan group retreats gallery 3 soul freedom journey bali buahan banyan tree escape waterfall" class="img-responsive" />
 
 
 </div>
@@ -694,7 +862,7 @@
       <div class="wrapper-image-item">
 
                   
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/component_k/public/2024-08/0%20Soul%20Freedom%20Journey%202.jpg.webp%3Fitok=ycFipPuf" width="482" height="727" alt="Meditate while immersed in nature" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" width="482" height="727" alt="Meditate while immersed in nature" class="img-responsive" />
 
 
 </div>
@@ -729,7 +897,7 @@
       <div class="wrapper-image-item">
 
                   
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/component_k/public/2024-08/0%20Waterfall%20Ritual%202.jpg.webp%3Fitok=OXp6olmD" width="482" height="727" alt="Waterfall Ritual" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" width="482" height="727" alt="Waterfall Ritual" class="img-responsive" />
 
 
 </div>
@@ -764,7 +932,7 @@
       <div class="wrapper-image-item">
 
                   
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/component_k/public/2024-08/0%20Morning%20Yoga.jpg.webp%3Fitok=QEob27zV" width="482" height="727" alt="morning yoga" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" width="482" height="727" alt="morning yoga" class="img-responsive" />
 
 
 </div>
@@ -799,7 +967,7 @@
       <div class="wrapper-image-item">
 
                   
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/component_k/public/2024-08/0%20Morning%20Journaling.jpg.webp%3Fitok=db3UIxZh" width="482" height="727" alt="Morning Journaling" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" width="482" height="727" alt="Morning Journaling" class="img-responsive" />
 
 
 </div>
@@ -834,7 +1002,7 @@
       <div class="wrapper-image-item">
 
                   
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/component_k/public/2024-08/0%20Yoga.jpg.webp%3Fitok=q2RTRB92" width="482" height="727" alt="retreats gallery 9 yoga" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" width="482" height="727" alt="retreats gallery 9 yoga" class="img-responsive" />
 
 
 </div>
@@ -869,7 +1037,7 @@
       <div class="wrapper-image-item">
 
                   
-            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="sites/btg/files/styles/component_k/public/2024-08/0%20Ice-Bath%201.jpg.webp%3Fitok=DwdeHwES" width="482" height="727" alt="retreats gallery 10 ice bath" class="img-responsive" />
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="images/photos/pastproject_nav.jpg" width="482" height="727" alt="retreats gallery 10 ice bath" class="img-responsive" />
 
 
 </div>
@@ -973,7 +1141,7 @@
         
             <ul class="menu menu--footer-col-1 nav">
                       <li class="first">
-        <li class="menu-item menu-item--expanded">          <a href="about-us.html" data-drupal-link-system-path="node/about-us">About Us</a>                      <a href="about-us.html" class="link-without-arrow">              <img class="menu-item-image img-responsive"                   src="sites/btg/files/styles/hero_banner/public/2023-12/New%20About%20Us%20Banner%20Image_opacity_0.jpg.webp%3Fitok=xpJ4LMYN"                   alt="About Us"/>            </a>                                      <ul class="menu-item menu-item--expanded menu menu-level-1">                                                <li class="menu-item">          <a href="about-us/our-team.html" class="link-has-arrow" data-drupal-link-system-path="node/our-team">Our Team</a>                                                    </li>          </ul>                    </li>        </ul>
+        <li class="menu-item menu-item--expanded">          <a href="about-us.html" data-drupal-link-system-path="node/about-us">About Us</a>                      <a href="about-us.html" class="link-without-arrow">              <img class="menu-item-image img-responsive"                   src="images/photos/aboutus_nav.jpg"                   alt="About Us"/>            </a>                                      <ul class="menu-item menu-item--expanded menu menu-level-1">                                                <li class="menu-item">          <a href="about-us/our-team.html" class="link-has-arrow" data-drupal-link-system-path="node/our-team">Our Team</a>                                                    </li>          </ul>                    </li>        </ul>
   
 
   </nav>
@@ -1258,3 +1426,4 @@
 
   </body>
 </html>
+
