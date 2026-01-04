@@ -653,10 +653,12 @@
     <div class="field--label sr-only">Video file</div>
               <div class="field--item">
                 <video 
+                  id="hero-video-desktop"
                   autoplay 
                   loop 
                   muted 
                   playsinline
+                  preload="auto"
                   width="100%" 
                   height="100%" 
                   style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
@@ -680,10 +682,12 @@
     <div class="field--label sr-only">Video file</div>
               <div class="field--item">
                 <video 
+                  id="hero-video-mobile"
                   autoplay 
                   loop 
                   muted 
                   playsinline
+                  preload="auto"
                   width="100%" 
                   height="100%" 
                   style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
@@ -1310,14 +1314,14 @@
 </article>
 
 
-  </div>
+    </div>
 
               </section>
 
                 </div>
   </div>
 
-      <footer class="footer container" role="contentinfo">
+  <footer class="footer container" role="contentinfo">
               <div class="region region-footer">
     <section id="block-footerline1" class="settings-tray-editable block block-blockgroup block-block-groupfooter-line-1 clearfix" data-drupal-settingstray="editable">
   
@@ -1381,6 +1385,8 @@
 
   </section>
 
+  </section>
+
 <section id="block-subscriber" class="wrapper-subscriber-social settings-tray-editable block block-blockgroup block-block-groupsubscriber clearfix" data-drupal-settingstray="editable">
   
     
@@ -1407,16 +1413,6 @@
   
 </form>
 </div>
-  </section>
-
-
-
-
-</div>
-
-  </section>
-
-
   </section>
 
 
@@ -1630,6 +1626,51 @@
         AOS.refresh();
       });
     }
+    
+    // Force video autoplay on mobile and desktop
+    function playVideos() {
+      const desktopVideo = document.getElementById('hero-video-desktop');
+      const mobileVideo = document.getElementById('hero-video-mobile');
+      
+      // Play desktop video
+      if (desktopVideo) {
+        desktopVideo.play().catch(function(error) {
+          console.log('Desktop video autoplay prevented:', error);
+          // Retry after user interaction
+          document.addEventListener('touchstart', function playDesktop() {
+            desktopVideo.play().catch(function() {});
+            document.removeEventListener('touchstart', playDesktop);
+          }, { once: true });
+        });
+      }
+      
+      // Play mobile video
+      if (mobileVideo) {
+        mobileVideo.play().catch(function(error) {
+          console.log('Mobile video autoplay prevented:', error);
+          // Retry after user interaction
+          document.addEventListener('touchstart', function playMobile() {
+            mobileVideo.play().catch(function() {});
+            document.removeEventListener('touchstart', playMobile);
+          }, { once: true });
+        });
+      }
+    }
+    
+    // Try to play videos immediately
+    playVideos();
+    
+    // Also try after page load
+    window.addEventListener('load', function() {
+      playVideos();
+    });
+    
+    // Ensure videos play on visibility change (when tab becomes active)
+    document.addEventListener('visibilitychange', function() {
+      if (!document.hidden) {
+        playVideos();
+      }
+    });
   });
 </script>
 
